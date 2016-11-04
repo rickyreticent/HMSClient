@@ -11,31 +11,25 @@ public class searchbl_stub implements searchblservice {
 	@Override
 	public void setAddress(String address) {
 		// TODO Auto-generated method stub
-		System.out.println("���õ�ַ");
+		System.out.println("设置地址ַ");
 	}
 
 	@Override
 	public void setDistrict(String district) {
 		// TODO Auto-generated method stub
-		System.out.println("������Ȧ");
+		System.out.println("设置商圈");
 	}
 
 	@Override
 	public ArrayList<hotelVO> getHotelList() {
-		System.out.println("��þƵ��б�");
+		System.out.println("获取酒店列表");
 		return new ArrayList<hotelVO>();
 	}
 
 	@Override
 	public ArrayList<roomVO> getRoomList(String hotelID) {
-		System.out.println("��÷����б�");
+		System.out.println("获取客房列表");
 		return new ArrayList<roomVO>();
-	}
-
-	@Override
-	public void setHotelList(ArrayList<hotelVO> hotelList) {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

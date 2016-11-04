@@ -11,5 +11,4 @@ public interface searchblservice {
 	public void setDistrict(String district);
 	public ArrayList<hotelVO> getHotelList();
 	public ArrayList<roomVO> getRoomList(String hotelID);
-	public void setHotelList(ArrayList<hotelVO> hotelList);
 }
