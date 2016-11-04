@@ -10,7 +10,7 @@ import vo.roomVO;
 /**
  * 
  * 
- * @author zz
+ * @author zgq
  *
  */
 
