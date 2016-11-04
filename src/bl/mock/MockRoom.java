@@ -18,7 +18,7 @@ package bl.mock;
  *    房间入住状态       
  *
  */
-public class MockRoom<return_type> {
+public class MockRoom {
 	private int type;
 	private String roomNUM;
 	private double price;
