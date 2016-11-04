@@ -98,7 +98,7 @@ public class hotelBL_Stub implements hotelblservice{
 			return true;
 		}
 		else{
-			System.out.println("����ʧ��");
+			System.out.println("error");
 			return false;
 		}
 	}
