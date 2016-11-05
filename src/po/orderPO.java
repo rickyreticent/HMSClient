@@ -6,17 +6,19 @@ public class orderPO {
 	String roomType;
 	int roomNumber;
 	String promotion;
-	double discount;
 	double price;
+	boolean isCancel;
+	boolean isAbnormal;
 	
-	public orderPO(String ci, String co, String rt, int rn, String pro, double d, double pri) {
+	public orderPO(String ci, String co, String rt, int rn, String pro, double pri,boolean ic,boolean ia) {
 		checkInTime=ci;
 		checkOutTime=co;
 		roomType=rt;
 		roomNumber=rn;
 		promotion=pro;
-		discount=d;
 		price=pri;
+		isCancel=ic;
+		isAbnormal=ia;
 	}
 	
 	public String getCheckInTime(){
@@ -33,9 +35,6 @@ public class orderPO {
 	}
 	public String getPromotion(){
 		return promotion;
-	}
-	public double getDiscount(){
-		return discount;
 	}
 	public double getPrice(){
 		return price;
@@ -55,9 +54,6 @@ public class orderPO {
 	}
 	public void setPromotion(String promotion){
 		this.promotion=promotion;
-	}
-	public void setDiscount(double discount){
-		this.discount=discount;
 	}
 	public void setPrice(double price){
 		this.price=price;

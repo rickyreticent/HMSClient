@@ -7,7 +7,14 @@ import vo.memberVO;
 import vo.orderVO;
 import vo.roomVO;
 
-public interface hotelblservice {
+/**
+ * 
+ * 
+ * @author zgq
+ *
+ */
+
+public interface hotelblservice {	
 
 	public memberVO getMInformation(String memberID);
 	public ArrayList<orderVO> getOrderList (String hotelID,String time);

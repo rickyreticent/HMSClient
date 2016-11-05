@@ -75,14 +75,14 @@ public class hotelBL_Stub implements hotelblservice{
 	@Override
 	public boolean updataOrder(String orderID, orderVO OR) {
 		// TODO Auto-generated method stub
-		System.out.println("�������³ɹ�");
+		System.out.println("订单更新成功");
 		return true;
 	}
 
 	@Override
 	public boolean updataHotelInformat(String hotelID, hotelVO HO) {
 		// TODO Auto-generated method stub
-		System.out.println("�Ƶ���Ϣ���³ɹ�");
+		System.out.println("酒店信息更新成功");
 		return true;
 	}
 
@@ -90,15 +90,15 @@ public class hotelBL_Stub implements hotelblservice{
 	public boolean check(String orderID, String memberID, String roomID, roomVO RO, int mark) {
 		// TODO Auto-generated method stub
 		if(mark==1){
-			System.out.println("��ס�ɹ�");
+			System.out.println("入住成功");
 			return true;
 		}
 		else if(mark==0){
-			System.out.println("�˷��ɹ�");
+			System.out.println("退房成功");
 			return true;
 		}
 		else{
-			System.out.println("error");
+			System.out.println("操作失败");
 			return false;
 		}
 	}

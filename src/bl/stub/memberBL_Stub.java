@@ -29,7 +29,7 @@ public class memberBL_Stub implements memberblservice {
 	@Override
 	public boolean saveMInformation(String memberID, memberVO M) {
 		// TODO Auto-generated method stub
-		System.out.println("�û���Ϣ����ɹ�");
+		System.out.println("用户信息保存成功");
 		return true;
 	}
 
