@@ -12,6 +12,6 @@ public class HotelTest {
 	
 	@Test
 	public void testGetOrderList(){
-		
+		//dsd 
 	}
 }
