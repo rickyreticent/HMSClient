@@ -44,6 +44,11 @@ public class hotelBL_Stub implements hotelblservice{
 		this.price=price;
 	}
 	
+	@Override
+	public memberVO getMInformation(String memberID) {
+		// TODO Auto-generated method stub
+		return new memberVO(memberID,name,level,credit,phone);
+	}
 
 	@Override
 	public ArrayList<orderVO> getOrderList(String hotelID, String time) {
