@@ -16,7 +16,6 @@ import vo.roomVO;
 
 public interface hotelblservice {	
 
-	public memberVO getMInformation(String memberID);
 	public ArrayList<orderVO> getOrderList (String hotelID,String time);
 	public orderVO getOrder(String orderID);
 	public hotelVO getHotelInformat (String hotelID);

@@ -10,9 +10,6 @@ import vo.roomVO;
 
 public class hotelbl implements hotelblservice{
 
-	public memberVO getMInformation(String memberID){
-		return null;
-	}
 	public ArrayList<orderVO> getOrderList (String hotelID,String time){
 		return null;
 	}
