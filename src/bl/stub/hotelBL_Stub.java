@@ -18,7 +18,7 @@ public class hotelBL_Stub implements hotelblservice{
 	int phone;
 	String checkInTime;
 	String checkOutTime;
-	int roomType;
+	String roomType;
 	int roomNumber;
 	String promotion;
 	double discount;
@@ -26,7 +26,7 @@ public class hotelBL_Stub implements hotelblservice{
 	
 	public hotelBL_Stub(String memberID,String name,String level,String address,
 			String district,int credit,int phone,String checkInTime,String checkOutTime,
-			int roomType,int roomNumber,String promotion,double discount,double price){
+			String roomType,int roomNumber,String promotion,double discount,double price){
 		this.memberID=memberID;
 		this.name=name;
 		this.level=level;
