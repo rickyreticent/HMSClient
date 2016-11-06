@@ -3,7 +3,6 @@ package ui.blservice;
 import java.util.ArrayList;
 
 import vo.hotelVO;
-import vo.memberVO;
 import vo.orderVO;
 import vo.roomVO;
 

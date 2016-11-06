@@ -2,7 +2,7 @@ package bl.stub;
 
 import java.util.ArrayList;
 
-import po.UserRole;
+import vo.UserRole;
 import ui.blservice.userblservice;
 import vo.userVO;
 

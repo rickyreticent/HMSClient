@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import ui.blservice.hotelblservice;
 import vo.hotelVO;
-import vo.memberVO;
 import vo.orderVO;
 import vo.roomVO;
 

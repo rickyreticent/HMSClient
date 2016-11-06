@@ -1,7 +1,7 @@
 package bl.driver;
 
 import bl.stub.userbl_stub;
-import po.UserRole;
+import vo.UserRole;
 import ui.blservice.userblservice;
 import vo.userVO;
 

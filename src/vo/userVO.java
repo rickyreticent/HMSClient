@@ -1,6 +1,6 @@
 package vo;
 
-import po.UserRole;
+import vo.UserRole;
 
 public class userVO {
 
