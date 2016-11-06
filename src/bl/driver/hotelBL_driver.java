@@ -20,7 +20,7 @@ public class hotelBL_driver {
 	static int phone=110;
 	static String checkInTime="2016-10-01";
 	static String checkOutTime="2016-10-01";
-	static String roomType="A";
+	static int roomType=1;
 	static int roomNumber=110;
 	static String promotion="best";
 	static double discount=100;

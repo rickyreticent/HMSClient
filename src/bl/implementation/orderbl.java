@@ -1,12 +1,22 @@
 package bl.implementation;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import vo.orderVO;
 
 public class orderbl {
+	
+	private ArrayList<orderVO> orderList;
+	public orderbl(){
+		orderList=new ArrayList<orderVO>();
+	}
+	
 	public orderVO getOrder(){
 		return null;
 	}
     public boolean addOrder(orderVO order) {
+    	orderList.add(order);
 		return true;
 	}
     public boolean cancelOrder(orderVO order) {
@@ -18,7 +28,7 @@ public class orderbl {
     public boolean cancelAbnormalOrder(orderVO order) {
 		return true;
 	}
-    public orderVO[] getOrderList() {
-		return null;
+    public List<orderVO> getOrderList() {
+		return orderList;
     }
 }

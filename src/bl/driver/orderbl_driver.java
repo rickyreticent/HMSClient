@@ -21,6 +21,6 @@ orderblservice orderbl = new orderbl_stub();;
 		public static void main(String[] args) {
 		// TODO Auto-generated method stub
 			orderbl_driver driver =new orderbl_driver();
-		driver.drive(new orderVO("1997-2-2", "1997-2-5", "�󴲷�", 2, "��", 0, 450));
+		driver.drive(new orderVO("1997-2-2", "1997-2-5", 1, 2, "��", 0, 450));
 	}
 }

@@ -1,5 +1,7 @@
 package bl.mock;
 
+import vo.orderVO;
+
 /**
  * �ṩ�����Ļ�����Ϣ������������,�ṩ���Ķ�����״̬������״̬���쳣״̬������״̬��
  * @author �����
@@ -16,7 +18,7 @@ package bl.mock;
  *    �����쳣״̬      
  *
  */
-public class MockOrder {
+public class MockOrder extends orderVO{
 	private String checkInTime;
 	private int days;
 	private int roomType;
