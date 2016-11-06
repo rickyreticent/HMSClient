@@ -18,8 +18,8 @@ import bl.implementation.*;;
  */
 public class HotelTest {
 	
-	private hotelbl hotel;
-	private orderbl order;
+	private hotel hotel;
+	private order order;
 	MockOrder order1;
 	MockOrder order2;
 	@Before
@@ -32,8 +32,8 @@ public class HotelTest {
 	
 	@Test
 	public void testGetOrderList(){
-		hotel=new hotelbl();
-		order=new orderbl();
+		hotel=new hotel();
+		order=new order();
 		order.addOrder(order1);
 		order.addOrder(order2);
 		List<orderVO> List = order.getOrderList();
@@ -43,8 +43,8 @@ public class HotelTest {
 	}
 	
 	public void testGetOrder(){
-		hotel=new hotelbl();
-		order=new orderbl();
+		hotel=new hotel();
+		order=new order();
 		order.addOrder(order1);
 		//assertEquals(,order1);
 		//sd

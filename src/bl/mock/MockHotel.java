@@ -2,7 +2,8 @@ package bl.mock;
 
 import java.util.ArrayList;
 
-import bl.implementation.hotelbl;
+import bl.implementation.hotel;
+import vo.hotelVO;
 import vo.roomVO;
 
 /**
@@ -12,7 +13,7 @@ import vo.roomVO;
  *
  */
 
-public class MockHotel extends hotelbl{
+public class MockHotel extends hotelVO{
 	
 	public String hotelID;
 	public String name;

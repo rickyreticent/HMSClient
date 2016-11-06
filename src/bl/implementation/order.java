@@ -5,10 +5,10 @@ import java.util.List;
 
 import vo.orderVO;
 
-public class orderbl {
+public class order {
 	
 	private ArrayList<orderVO> orderList;
-	public orderbl(){
+	public order(){
 		orderList=new ArrayList<orderVO>();
 	}
 	

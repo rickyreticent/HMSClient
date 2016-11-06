@@ -3,7 +3,7 @@ package bl.implementation;
 import ui.blservice.roomblservice;
 import vo.roomVO;
 
-public class roombl implements roomblservice{
+public class room implements roomblservice{
 
 	public roomVO getRoom(String number){
 		return null;

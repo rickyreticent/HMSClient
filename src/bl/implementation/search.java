@@ -5,13 +5,13 @@ import java.util.ArrayList;
 import ui.blservice.searchblservice;
 import vo.*;
 
-public class searchbl implements searchblservice {
+public class search implements searchblservice {
 	
 	private String address;
 	private String district;
 	private ArrayList<hotelVO> hotelList;
 	
-	public searchbl() {
+	public search() {
 		address = null;
 		district = null;
 		hotelList = null;
