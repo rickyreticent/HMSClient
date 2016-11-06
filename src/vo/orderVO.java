@@ -3,14 +3,13 @@ package vo;
 public class orderVO {
 	String checkInTime;
 	String checkOutTime;
-	int roomType;
+	String roomType;
 	int roomNumber;
 	String promotion;
 	double discount;
 	double price;
 	
-	public orderVO(){}
-	public orderVO(String ci,String co,int rt,int rn,String pro,double d,double pri){
+	public orderVO(String ci,String co,String rt,int rn,String pro,double d,double pri){
 		checkInTime=ci;
 		checkOutTime=co;
 		roomType=rt;
@@ -26,7 +25,7 @@ public class orderVO {
 	public String getCheckOutTime(){
 		return checkOutTime;
 	}
-	public int getRoomType(){
+	public String getRoomType(){
 		return roomType;
 	}
 	public int getRoomNumber(){
@@ -49,7 +48,7 @@ public class orderVO {
 	public void setCheckOutTime(String checkOutTime){
 		this.checkOutTime=checkOutTime;
 	}
-	public void setRoomType(int roomType){
+	public void setRoomType(String roomType){
 		this.roomType=roomType;
 	}
 	public void setRoomNumber(int roomNumber){
