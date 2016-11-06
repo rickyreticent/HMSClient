@@ -1,19 +1,19 @@
 package bl.mock;
 
-import vo.dateVO;
-import vo.promotionVO;
+import vo.DateVO;
+import vo.PromotionVO;
 
 /**
  * Promotion的Mock类
  * @author CROFF
  * @version 2016-11-05 11:45
  */
-public class MockPromotion extends promotionVO {
+public class MockPromotion extends PromotionVO {
 	
-	dateVO birthday;
+	DateVO birthday;
 	int roomNumber;
 	boolean isCoordinate;
-	dateVO date;
+	DateVO date;
 	boolean isVIP;
 	String district;
 	double discount;
@@ -28,7 +28,7 @@ public class MockPromotion extends promotionVO {
 	 * @param district 目标酒店商圈
 	 * @param discount 折扣
 	 */
-	public MockPromotion(dateVO birthday, int roomNumber, boolean isCoordinate, dateVO date, boolean isVIP, String district, double discount) {
+	public MockPromotion(DateVO birthday, int roomNumber, boolean isCoordinate, DateVO date, boolean isVIP, String district, double discount) {
 		super(birthday, roomNumber, isCoordinate, date, isVIP, district, discount);
 	}
 	
@@ -36,7 +36,7 @@ public class MockPromotion extends promotionVO {
 	 * 设置生日
 	 * @param birthday 生日
 	 */
-	public void setBirthday(dateVO birthday) {
+	public void setBirthday(DateVO birthday) {
 		this.birthday = birthday;
 	}
 	
@@ -44,7 +44,7 @@ public class MockPromotion extends promotionVO {
 	 * 获取生日
 	 * @return 生日
 	 */
-	public dateVO getBirday(){
+	public DateVO getBirday(){
 		return birthday;
 	}
 	
@@ -84,7 +84,7 @@ public class MockPromotion extends promotionVO {
 	 * 设置入住日期
 	 * @param date 入住日期
 	 */
-	public void setDate(dateVO date){
+	public void setDate(DateVO date){
 		this.date = date;
 	}
 	
@@ -92,7 +92,7 @@ public class MockPromotion extends promotionVO {
 	 * 获取入住日期
 	 * @return 入住日期
 	 */
-	public dateVO getDate(){
+	public DateVO getDate(){
 		return date;
 	}
 	

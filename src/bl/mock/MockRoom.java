@@ -3,7 +3,7 @@
  */
 package bl.mock;
 
-import vo.roomVO;
+import vo.RoomVO;
 
 /**
  * 提供房间的基本信息（包括房间类型、单价和入住情况）,提供更改房间入住状态和单价的方法。
@@ -19,11 +19,12 @@ import vo.roomVO;
  *    房间入住状态       
  *
  */
-public class MockRoom extends roomVO {
+public class MockRoom extends RoomVO {
 	private int type;
 	private int roomNUM;
 	private double price;
 	private boolean isValid;
+	
 	/**
 	 *  构造MockRoom的方法，确定房间的类型、房间号和单价
 	 *  @param t 
@@ -33,7 +34,7 @@ public class MockRoom extends roomVO {
 	 *  @param pr
 	 *    房间单价      
 	 */
-	public MockRoom(int t, int number, double pr){
+	public MockRoom(int t, int number, double pr) {
 		type=t;
 		roomNUM=number;
 		price=pr;
@@ -66,7 +67,7 @@ public class MockRoom extends roomVO {
 	 * @author 张新悦
 	 * @version 2016-11-04 09:50
 	 */
-	public double getPrice(){
+	public double getPrice() {
 		return price;
 	}
 	
@@ -76,7 +77,7 @@ public class MockRoom extends roomVO {
 	 * @author 张新悦
 	 * @version 2016-11-04 09:50
 	 */
-	public boolean isValid(){
+	public boolean isValid() {
 		return isValid;
 	}
 	
@@ -88,8 +89,8 @@ public class MockRoom extends roomVO {
 	 * @author 张新悦
 	 * @version 2016-11-04 09:50
 	 */
-	public void setPrice(double pri){
-		price=pri;
+	public void setPrice(double pri) {
+		price = pri;
 	}
 	
 	/**
@@ -98,9 +99,9 @@ public class MockRoom extends roomVO {
 	 * @author 张新悦
 	 * @version 2016-11-04 09:59
 	 */
-	public boolean checkIn(){
+	public boolean checkIn() {
 		if(!isValid) return false;
-		isValid=false;
+		isValid = false;
 		return true;
 	}
 	
@@ -110,9 +111,10 @@ public class MockRoom extends roomVO {
 	 * @author 张新悦
 	 * @version 2016-11-04 10:04
 	 */
-	public boolean checkOut(){
+	public boolean checkOut() {
 		if(isValid) return false;
-		isValid=true;
+		isValid = true;
 		return true;
 	}
+	
 }

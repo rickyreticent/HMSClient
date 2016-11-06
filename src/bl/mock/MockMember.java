@@ -3,7 +3,7 @@
  */
 package bl.mock;
 
-import vo.memberVO;
+import vo.MemberVO;
 
 /**
  * 提供member的基本信息（包括姓名或名称，联系方式、信用）和修改服务
@@ -23,13 +23,15 @@ import vo.memberVO;
  *   信用值    
  *
  */
-public class MockMember extends memberVO {
+public class MockMember extends MemberVO {
+	
 	private String account;
 	private String password;
 	private String name;
 	private String birthday;
 	private String phone;
 	private double credit;
+	
 	/**
 	 *  构造MockRoom的方法，确定客户账号、名称、密码等基本信息
 	 *  @param acc 
@@ -45,8 +47,6 @@ public class MockMember extends memberVO {
 	 *  @param cre
 	 *   信用值      
 	 */
-
-	
 	public MockMember(String acc,String pass,String birth,String na,String tel,double cre) {
 		account=acc;
 		password=pass;
@@ -179,4 +179,5 @@ public class MockMember extends memberVO {
 		if(password.equals(pass)) return true;
 		return false;
 	}
+	
 }

@@ -2,16 +2,16 @@ package bl.junit.test;
 
 import org.junit.*;
 
-import bl.implementation.search;
+import bl.implementation.Search;
 
 public class SearchTest {
 
 	@SuppressWarnings("unused")
-	private search s;
+	private Search s;
 	
 	@Before
 	public void setUp() {
-		s = new search();
+		s = new Search();
 	}
 	
 	@Test

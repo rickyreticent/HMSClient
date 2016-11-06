@@ -2,8 +2,8 @@ package bl.mock;
 
 import java.util.ArrayList;
 
-import vo.hotelVO;
-import vo.roomVO;
+import vo.HotelVO;
+import vo.RoomVO;
 
 /**
  * 
@@ -12,14 +12,14 @@ import vo.roomVO;
  *
  */
 
-public class MockHotel extends hotelVO{
+public class MockHotel extends HotelVO {
 	
 	public String hotelID;
 	public String name;
 	public String address;
 	public String level;
 	public String district;
-	public ArrayList<roomVO> roomList;
+	public ArrayList<RoomVO> roomList;
 	
 	/**
 	 * @param hotelID 		酒店ID
@@ -28,15 +28,13 @@ public class MockHotel extends hotelVO{
 	 * @param level 		酒店星级
 	 * @param district 		酒店所属商圈
 	 */
-	
-	
-	public MockHotel(String hotelID, String name, String address, String level, String district, ArrayList<roomVO> roomList) {
-		this.hotelID=hotelID;
-		this.name=name;
-		this.address=address;
-		this.level=level;
-		this.district=district;
-		this.roomList=roomList;
+	public MockHotel(String hotelID,String name,String address,String level,String district,ArrayList<RoomVO> roomList){
+		this.hotelID = hotelID;
+		this.name = name;
+		this.address = address;
+		this.level = level;
+		this.district = district;
+		this.roomList = roomList;
 	}
 	
 	/**
@@ -83,7 +81,8 @@ public class MockHotel extends hotelVO{
 	 * 
 	 * @return 	酒店所有房间列表
 	 */
-	public ArrayList<roomVO> getRoomList(){
+	public ArrayList<RoomVO> getRoomList(){
 		return roomList;
 	}
+	
 }

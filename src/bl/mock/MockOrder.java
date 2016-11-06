@@ -1,158 +1,186 @@
 package bl.mock;
 
-import vo.orderVO;
+import vo.OrderVO;
 
 /**
- * �ṩ�����Ļ�����Ϣ������������,�ṩ���Ķ�����״̬������״̬���쳣״̬������״̬��
- * @author �����
- * @version 2016-11-04 10:52
- * @param type
- *    ��������
- * @param roomNUM 
- *    �����
+ 提供member的基本信息（包括姓名或名称，联系方式、信用）和修改服务
+ * @author 婧婧
+ * @version 2016-11-04 11:43
+ * @param checkInTime 
+ *   入住时间
+ * @param days
+ *   入住天数
+ * @param roomType
+ *   房间类型    
+ * @param roomNumber
+ *   房间数量
+ * @param Promotion
+ *   营销策略
  * @param price
- *    ���䵥��
- * @param isCancel
- *    ���䳷��״̬       
- * @param isAbnormal
- *    �����쳣״̬      
- *
+ *   价格    
+ * @param
  */
-public class MockOrder extends orderVO{
+ 
+public class MockOrder extends OrderVO {
+	
 	private String checkInTime;
 	private int days;
 	private int roomType;
 	private int roomNumber;
 	private String promotion;
 	private double price;
-	private boolean isCancel;
-	private boolean isAbnormal;
-	
-	//庄庄加的,构造方法里面也加了,是第一个
 	private String orderID;
+	private int state;//1，已经执行；2，未执行；3，异常；4，撤销
+	
 	public String getOrderID() {
 		return orderID;
 	}
-	//庄庄加到这，没有这些，assert测试不会通过
 	
-	public MockOrder(String orID,String ci, int da, int rt, int rn, String pro,double pri,boolean ic,boolean ia) {
-		/**
-		 *  ����MockOrder�ķ�����ȷ����������͡�����ź͵���
-		 *  @param ci 
-		 *    ��סʱ��
-		 *  @param da
-		 *    ��ס����
-		 *  @param rt
-		 *    ��������
-		 *  @param rn
-		 *    ��������      
-		 *  @param pro
-		 *    Ӫ������ 
-		 *  @param pri
-		 *    �����ܼ۸�
-		 * @param isCancel
-		 *    ���䳷��״̬       
-		 * @param isAbnormal
-		 *    �����쳣״̬      
-		 */
-		orderID=orID;
-		checkInTime=ci;
-		days=da;
-		roomType=rt;
-		roomNumber=rn;
-		promotion=pro;
-		price=pri;
-		isCancel=ic;
-		isAbnormal=ia;
+	/**
+	@param checkInTime 
+	 *   入住时间
+	 * @param days
+	 *   入住天数
+	 * @param roomType
+	 *   房间类型    
+	 * @param roomNumber
+	 *   房间数量
+	 * @param Promotion
+	 *   营销策略
+	 * @param price
+	 *   价格    
+	 */
+	public MockOrder(String orID,int state,String ci, int da, int rt, int rn, String pro,double pri) {
+		
+		orderID = orID;
+		this.setState(state);
+		checkInTime = ci;
+		days = da;
+		roomType = rt;
+		roomNumber = rn;
+		promotion = pro;
+		price = pri;
+
 	}
+	
+	/**
+	 * 查看入住时间
+	 * @return 以String为表示入住时间
+	 */
 	public String getCheckInTime(){
-		/**
-		 * �鿴��סʱ��
-		 * @return ���ַ���Ϊ�������סʱ��
-		 * @author �����
-		 * @version 2016-11-04 11:29
-		 */
 		return checkInTime;
 	}
+	
+	/**
+	 * 查看入住天数
+	 * @return 以整数为表示入住天数
+	 */
 	public int getDays(){
-		/**
-		 * �鿴��ס����
-		 * @return ������Ϊ�������ס����
-		 * @author �����
-		 * @version 2016-11-04 11:30
-		 */
 		return days;
 	}
+	
+	/**
+	 * 查看入住的房间类型
+	 * @return 以整数为表示入住房间类型
+	 */
 	public int getRoomType(){
-		/**
-		 * �鿴ס������
-		 * @return ������Ϊ�������סʱ��
-		 * @author �����
-		 * @version 2016-11-04 11:30
-		 */
 		return roomType;
 	}
+	
+	/**
+	 * 查看入住的房间数量
+	 * @return 以整数为表示入住房间数量
+	 */
 	public int getRoomNumber(){
-		/**
-		 * �鿴ס������
-		 * @return ������Ϊ�����ס������
-		 * @author �����
-		 * @version 2016-11-04 11:33
-		 */
 		return roomNumber;
 	}
+	
+	/**
+	 * 查看营销策略
+	 * @return 以string为表示营销策略
+	 */
 	public String getPromotion(){
-		/**
-		 * �鿴Ӫ������
-		 * @return ���ַ���Ϊ�����Ӫ������
-		 * @author �����
-		 * @version 2016-11-04 11:35
-		 */
 		return promotion;
 	}
+	
+	/**
+	 * 查看订单总价格
+	 * @return 以整数为表示订单价格
+	 */
 	public double getPrice(){
-		/**
-		 * �鿴�۸�
-		 * @return �Ը�����Ϊ����ļ۸�
-		 * @author �����
-		 * @version 2016-11-04 11:37
-		 */
 		return price;
 	}
-	public boolean Cancel(){
-		/**
-		 * ����������Ϊ����״̬
-		 * @return �Բ���ֵΪ����Ľ���������Ϊ����״̬
-		 * @author �����
-		 * @version 2016-11-04 11:46
-		 */
-		if(isCancel) 
-			return false;
-		isCancel=true;
-		return true;
+	
+	/**
+	 * 查看订单状态
+	 * @return 以整数为表示订单状态（1，已经执行；2，未执行；3，异常；4，撤销）
+	 */
+	public int getState() {
+		return state;
 	}
-	public boolean Abnormal(){
-		/**
-		 * ����������Ϊ�쳣״̬
-		 * @return �Բ���ֵΪ����Ľ���������Ϊ�쳣״̬
-		 * @author �����
-		 * @version 2016-11-04 11:46
-		 */
-		if(isAbnormal) 
-			return false;
-		isAbnormal=true;
-		return true;
+	
+	/**
+	 * 设置订单状态
+	 * @param 以整数为表示订单状态（1，已经执行；2，未执行；3，异常；4，撤销）
+	 */
+	public void setState(int state) {
+		this.state = state;
 	}
-	public boolean CancelAbnormal(){
-		/**
-		 * �����߳ɹ����쳣��������Ϊ����״̬
-		 * @return �Բ���ֵΪ����Ľ��쳣��������Ϊ����״̬
-		 * @author �����
-		 * @version 2016-11-04 11:50
-		 */
-		if(isCancel) 
-			return false;
-		isCancel=false;
-		return true;
+	
+	/**
+	 * 设置入住时间
+	 * @param 入住时间
+	 */
+	public void setCheckInTime(String checkInTime){
+		this.checkInTime=checkInTime;
 	}
+	
+	/**
+	 * 设置入住天数
+	 * @param 入住天数
+	 */
+	public void setDays(int days){
+		this.days=days;
+	}
+	
+	/**
+	 * 设置入住房间类型
+	 * @param 入住房间类型
+	 */
+	public void setRoomType(int roomType){
+		this.roomType=roomType;
+	}
+	
+	/**
+	 * 设置入住房间数量
+	 * @param 入住房间数量
+	 */
+	public void setRoomNumber(int roomNumber){
+		this.roomNumber=roomNumber;
+	}
+	
+	/**
+	 * 设置入住营销策略
+	 * @param 入住营销策略
+	 */
+	public void setPromotion(String promotion){
+		this.promotion=promotion;
+	}
+	
+	/**
+	 * 设置订单总价格
+	 * @param 订单总价格
+	 */
+	public void setPrice(double price){
+		this.price=price;
+	}
+	
+	/**
+	 * 设置订单ID
+	 * @param 订单ID
+	 */
+	public void setOrderID(String orderID) {
+		this.orderID = orderID;
+	}
+	
 }

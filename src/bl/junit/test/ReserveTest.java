@@ -4,17 +4,17 @@ import static org.junit.Assert.*;
 
 import org.junit.*;
 
-import bl.implementation.reserve;
+import bl.implementation.Reserve;
 import bl.mock.MockDate;
 import bl.mock.MockPromotion;
 
 public class ReserveTest {
 	
-	private reserve r;
+	private Reserve r;
 	
 	@Before
 	public void setUp() {
-		r = new reserve(500);
+		r = new Reserve(500);
 	}
 
 	@Test
