@@ -28,7 +28,14 @@ public class MockOrder extends orderVO{
 	private boolean isCancel;
 	private boolean isAbnormal;
 	
-	public MockOrder(String ci, int da, int rt, int rn, String pro,double pri,boolean ic,boolean ia) {
+	//庄庄加的,构造方法里面也加了,是第一个
+	private String orderID;
+	public String getOrderID() {
+		return orderID;
+	}
+	//庄庄加到这，没有这些，assert测试不会通过
+	
+	public MockOrder(String orID,String ci, int da, int rt, int rn, String pro,double pri,boolean ic,boolean ia) {
 		/**
 		 *  ����MockOrder�ķ�����ȷ����������͡�����ź͵���
 		 *  @param ci 
@@ -48,6 +55,7 @@ public class MockOrder extends orderVO{
 		 * @param isAbnormal
 		 *    �����쳣״̬      
 		 */
+		orderID=orID;
 		checkInTime=ci;
 		days=da;
 		roomType=rt;

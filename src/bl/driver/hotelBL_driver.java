@@ -37,7 +37,7 @@ public class hotelBL_driver {
 		//System.out.println(H.getMInformation(memberID));
 		System.out.println(H.updataHotelInformat(hotelID, new hotelVO(hotelID, name, address, level, district)));
 		System.out.println(H.updataOrder(orderID, new orderVO(checkInTime, checkOutTime, roomType, roomNumber,
-				promotion, discount, price)));
+				promotion, discount, price, "123")));
 	}
 	
 	public static void main(String[] args) {

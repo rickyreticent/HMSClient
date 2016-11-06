@@ -12,7 +12,12 @@ public class order {
 		orderList=new ArrayList<orderVO>();
 	}
 	
-	public orderVO getOrder(){
+	public orderVO getOrder(String orderID){
+		for(int i=0;i<orderList.size();i++){
+			if(orderList.get(i).getOrderID().equals(orderID)){
+				return orderList.get(i);
+			}
+		}
 		return null;
 	}
     public boolean addOrder(orderVO order) {

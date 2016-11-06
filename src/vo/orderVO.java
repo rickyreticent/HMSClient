@@ -1,6 +1,7 @@
 package vo;
 
 public class orderVO {
+	private String orderID;
 	String checkInTime;
 	String checkOutTime;
 	int roomType;
@@ -10,7 +11,7 @@ public class orderVO {
 	double price;
 	
 	public orderVO(){}
-	public orderVO(String ci,String co,int rt,int rn,String pro,double d,double pri){
+	public orderVO(String ci,String co,int rt,int rn,String pro,double d,double pri,String orID){
 		checkInTime=ci;
 		checkOutTime=co;
 		roomType=rt;
@@ -18,6 +19,7 @@ public class orderVO {
 		promotion=pro;
 		discount=d;
 		price=pri;
+		setOrderID(orID);
 	}
 	
 	public String getCheckInTime(){
@@ -63,5 +65,11 @@ public class orderVO {
 	}
 	public void setPrice(double price){
 		this.price=price;
+	}
+	public String getOrderID() {
+		return orderID;
+	}
+	public void setOrderID(String orderID) {
+		this.orderID = orderID;
 	}
 }
