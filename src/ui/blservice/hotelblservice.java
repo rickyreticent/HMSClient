@@ -1,6 +1,5 @@
 package ui.blservice;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import vo.hotelVO;

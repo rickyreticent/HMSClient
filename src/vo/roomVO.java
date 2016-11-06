@@ -5,7 +5,11 @@ public class roomVO {
 	private boolean valid;
 	private int number;
 	private Room_Type type;
-	private int price;
+	private double price;
+	
+	public roomVO() {
+		
+	}
 	
 	public roomVO(boolean valid, int number,Room_Type type,int price){
 		this.valid =valid;
@@ -26,7 +30,7 @@ public class roomVO {
 		return type;
 	}
 	
-	public int getPrice(){
+	public double getPrice(){
 		return price;
 	}
 }

@@ -1,5 +1,6 @@
 package bl.mock;
 
+import vo.dateVO;
 import vo.promotionVO;
 
 /**
@@ -9,31 +10,33 @@ import vo.promotionVO;
  */
 public class MockPromotion extends promotionVO {
 	
-	String birthday;
+	dateVO birthday;
 	int roomNumber;
 	boolean isCoordinate;
-	String date;
+	dateVO date;
 	boolean isVIP;
 	String district;
+	double discount;
 	
 	/**
 	 * 构造MockPromotion的方法
-	 * @param birthday
-	 * @param roomNumber
-	 * @param isCoordinate
-	 * @param date
-	 * @param isVIP
-	 * @param district
+	 * @param birthday 生日
+	 * @param roomNumber 客房号
+	 * @param isCoordinate 是否是企业合作客户
+	 * @param date 入住日期
+	 * @param isVIP 是否是VIP会员
+	 * @param district 目标酒店商圈
+	 * @param discount 折扣
 	 */
-	public MockPromotion(String birthday, int roomNumber, boolean isCoordinate, String date, boolean isVIP, String district) {
-		super(birthday, roomNumber, isCoordinate, date, isVIP, district);
+	public MockPromotion(dateVO birthday, int roomNumber, boolean isCoordinate, dateVO date, boolean isVIP, String district, double discount) {
+		super(birthday, roomNumber, isCoordinate, date, isVIP, district, discount);
 	}
 	
 	/**
 	 * 设置生日
 	 * @param birthday 生日
 	 */
-	public void setBirthday(String birthday) {
+	public void setBirthday(dateVO birthday) {
 		this.birthday = birthday;
 	}
 	
@@ -41,7 +44,7 @@ public class MockPromotion extends promotionVO {
 	 * 获取生日
 	 * @return 生日
 	 */
-	public String getBirday(){
+	public dateVO getBirday(){
 		return birthday;
 	}
 	
@@ -81,7 +84,7 @@ public class MockPromotion extends promotionVO {
 	 * 设置入住日期
 	 * @param date 入住日期
 	 */
-	public void setDate(String date){
+	public void setDate(dateVO date){
 		this.date = date;
 	}
 	
@@ -89,7 +92,7 @@ public class MockPromotion extends promotionVO {
 	 * 获取入住日期
 	 * @return 入住日期
 	 */
-	public String getDate(){
+	public dateVO getDate(){
 		return date;
 	}
 	
@@ -123,6 +126,22 @@ public class MockPromotion extends promotionVO {
 	 */
 	public String getDistrict(){
 		return district;
+	}
+	
+	/**
+	 * 设置折扣
+	 * @param 折扣
+	 */
+	public void setDiscount(double discount) {
+		this.discount = discount;
+	}
+	
+	/**
+	 * 获取折扣
+	 * @return 折扣
+	 */
+	public double getDiscount() {
+		return discount;
 	}
 	
 }

@@ -32,4 +32,16 @@ public class searchbl_stub implements searchblservice {
 		return new ArrayList<roomVO>();
 	}
 
+	@Override
+	public String getAddress() {
+		System.out.println("获取地址");
+		return null;
+	}
+
+	@Override
+	public String getDistrict() {
+		System.out.println("获取商圈");
+		return null;
+	}
+
 }

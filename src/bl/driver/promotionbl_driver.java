@@ -2,6 +2,7 @@ package bl.driver;
 
 import bl.stub.promotionbl_stub;
 import ui.blservice.promotionblservice;
+import vo.dateVO;
 import vo.promotionVO;
 
 public class promotionbl_driver {
@@ -19,6 +20,6 @@ public class promotionbl_driver {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		promotionbl_driver driver =new promotionbl_driver();
-		driver.drive(new promotionVO("1997-3-4", 1, false, "2016-2-11", false,"12345678"));
+		driver.drive(new promotionVO(new dateVO(1997, 03, 04), 1, false, new dateVO(2015, 03, 21), false,"12345678", 0.8));
 	}
 }

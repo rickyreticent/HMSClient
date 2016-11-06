@@ -1,13 +1,11 @@
 package bl.implementation;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import ui.blservice.hotelblservice;
 import vo.hotelVO;
 import vo.orderVO;
 import vo.roomVO;
-import bl.implementation.*;
 
 public class hotel implements hotelblservice{
 

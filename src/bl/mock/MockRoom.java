@@ -3,6 +3,7 @@
  */
 package bl.mock;
 
+import vo.roomVO;
 
 /**
  * 提供房间的基本信息（包括房间类型、单价和入住情况）,提供更改房间入住状态和单价的方法。
@@ -18,9 +19,9 @@ package bl.mock;
  *    房间入住状态       
  *
  */
-public class MockRoom {
+public class MockRoom extends roomVO {
 	private int type;
-	private String roomNUM;
+	private int roomNUM;
 	private double price;
 	private boolean isValid;
 	/**
@@ -32,7 +33,7 @@ public class MockRoom {
 	 *  @param pr
 	 *    房间单价      
 	 */
-	public MockRoom(int t,String number,double pr){
+	public MockRoom(int t, int number, double pr){
 		type=t;
 		roomNUM=number;
 		price=pr;
@@ -55,7 +56,7 @@ public class MockRoom {
 	 * @author 张新悦
 	 * @version 2016-11-04 09:50
 	 */
-	public String getNumber() {
+	public int getNumber() {
 		return roomNUM;
 	}
 	
