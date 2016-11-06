@@ -49,7 +49,7 @@ public class hotelBL_Stub implements hotelblservice{
 		// TODO Auto-generated method stub
 		ArrayList<orderVO> orderList=new ArrayList<orderVO>();
 		orderList.add(new orderVO(checkInTime, checkOutTime, roomType, roomNumber,
-				promotion, discount, price));
+				promotion, discount, price,"1100"));
 		return orderList;
 	}
 
@@ -57,7 +57,7 @@ public class hotelBL_Stub implements hotelblservice{
 	public orderVO getOrder(String orderID) {
 		// TODO Auto-generated method stub
 		return new orderVO(checkInTime, checkOutTime, roomType, roomNumber,
-				promotion, discount, price);
+				promotion, discount, price,"1100");
 	}
 
 	@Override

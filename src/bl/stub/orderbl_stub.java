@@ -5,7 +5,7 @@ import vo.orderVO;
 
 public class orderbl_stub implements orderblservice{
 	public orderVO getOrder(){
-		return new orderVO("1997-2-2", "1997-2-5", 1, 2, "��", 0, 450);
+		return new orderVO("1997-2-2", "1997-2-5", 1, 2, "��", 0, 450,"1112585");
 	}
     public boolean addOrder(orderVO order) {
 		return true;
