@@ -4,14 +4,16 @@ public class memberPO {
 	
 	private String memberID;
 	private String name;
-	private String level;
-	private int credit;
-	private int phone;
+	private String password;
+	private String birthday;
+	private double credit;
+	private String phone;
 	
-	public memberPO(String memberID,String name,String level,int credit,int phone){
+	public memberPO(String memberID,String name,String password,String birth,double credit,String phone){
 		this.setName(name);
 		this.setMemberID(memberID);
-		this.setLevel(level);
+		this.setPassword(password);
+		this.setBirthday(birth);
 		this.setCredit(credit);
 		this.setPhone(phone);
 	}
@@ -32,27 +34,34 @@ public class memberPO {
 		this.name = name;
 	}
 
-	public String getLevel() {
-		return level;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setLevel(String level) {
-		this.level = level;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
-	public int getCredit() {
+	public String getBirthday(){
+		return birthday;
+	}
+	
+	public void setBirthday(String birth){
+		this.birthday=birth;
+	}
+	public double getCredit() {
 		return credit;
 	}
 
-	public void setCredit(int credit) {
+	public void setCredit(double credit) {
 		this.credit = credit;
 	}
 
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 }

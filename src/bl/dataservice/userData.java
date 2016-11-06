@@ -2,15 +2,14 @@ package bl.dataservice;
 
 import java.util.ArrayList;
 
-import po.userPO;
+import po.hotelPO;
+import po.memberPO;
 
 public interface userData {
-
-	
-	
-	public boolean insert(userPO user);
-	public boolean delete(userPO user);
-	public boolean update(userPO user);
-	public userPO getUser(String ID);
-	public ArrayList<userPO> getList(String limit);
+	public boolean addMember(memberPO member);
+	public boolean deleteMember(memberPO member);
+	public ArrayList<memberPO> getMemberList(String limit);	
+	public boolean addHotel(hotelPO hotel);
+	public boolean deleteHotel(hotelPO hotel);
+	public ArrayList<hotelPO> getHotelList(String limit);
 }
