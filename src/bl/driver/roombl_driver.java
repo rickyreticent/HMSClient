@@ -18,7 +18,7 @@ public class roombl_driver {
 		// TODO Auto-generated method stub
 
 		roomVO room = new roomVO(true ,521 , Room_Type.Normal, 250);
-		roombl_driver driver = new roombl_driver(room);
+		new roombl_driver(room);
 	}
 
 }

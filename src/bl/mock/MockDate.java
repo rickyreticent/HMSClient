@@ -1,11 +1,13 @@
 package bl.mock;
 
+import vo.dateVO;
+
 /**
  * Date的Mock类
  * @author CROFF
  * @version 2016-11-05 16:40
  */
-public class MockDate {
+public class MockDate extends dateVO {
 
 	private int year, month, day;
 
@@ -16,9 +18,7 @@ public class MockDate {
 	 * @param day 日
 	 */
 	public MockDate(int year, int month, int day) {
-		this.year = year;
-		this.month = month;
-		this.day = day;
+		super(year, month, day);
 	}
 	
 	/**

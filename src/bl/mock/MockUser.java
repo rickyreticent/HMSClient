@@ -1,13 +1,14 @@
 package bl.mock;
 
-import po.UserRole;
+import vo.UserRole;
+import vo.userVO;
 
 /**
  * User的Mock类
  * @author CROFF
  * @version 2016-11-05 16:33
  */
-public class MockUser {
+public class MockUser extends userVO {
 
 	private String ID;
 	private String password;
@@ -22,10 +23,7 @@ public class MockUser {
 	 * @param role 角色
 	 */
 	public MockUser(String ID, String password, String name, UserRole role){
-		this.ID = ID;
-		this.password = password;
-		this.name = name;
-		this.role = role;
+		super(ID, password, name, role);
 	}
 	
 	/**

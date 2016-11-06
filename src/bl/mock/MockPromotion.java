@@ -1,11 +1,13 @@
 package bl.mock;
 
+import vo.promotionVO;
+
 /**
  * Promotion的Mock类
  * @author CROFF
  * @version 2016-11-05 11:45
  */
-public class MockPromotion {
+public class MockPromotion extends promotionVO {
 	
 	String birthday;
 	int roomNumber;
@@ -24,12 +26,7 @@ public class MockPromotion {
 	 * @param district
 	 */
 	public MockPromotion(String birthday, int roomNumber, boolean isCoordinate, String date, boolean isVIP, String district) {
-		this.birthday = birthday;
-		this.roomNumber = roomNumber;
-		this.isCoordinate = isCoordinate;
-		this.date = date;
-		this.isVIP = isVIP;
-		this.district = district;
+		super(birthday, roomNumber, isCoordinate, date, isVIP, district);
 	}
 	
 	/**
