@@ -47,5 +47,6 @@ public class HotelTest {
 		order=new orderbl();
 		order.addOrder(order1);
 		//assertEquals(,order1);
+		//sd
 	}
 }
