@@ -3,6 +3,8 @@
  */
 package bl.mock;
 
+import vo.memberVO;
+
 /**
  * 提供member的基本信息（包括姓名或名称，联系方式、信用）和修改服务
  * @author 张新悦
@@ -21,7 +23,7 @@ package bl.mock;
  *   信用值    
  *
  */
-public class MockMember {
+public class MockMember extends memberVO {
 	private String account;
 	private String password;
 	private String name;
@@ -43,6 +45,8 @@ public class MockMember {
 	 *  @param cre
 	 *   信用值      
 	 */
+
+	
 	public MockMember(String acc,String pass,String birth,String na,String tel,double cre) {
 		account=acc;
 		password=pass;
@@ -141,7 +145,7 @@ public class MockMember {
 	 * @version 2016-11-04 14:45
 	 * @return 以String为表示的客户生日  
 	 */
-	public String getBirth(){
+	public String getBirthday(){
 		return birthday;
 	}
 	
@@ -161,7 +165,7 @@ public class MockMember {
 	 * @version 2016-11-04 14:45
 	 * @return 以Double为表示的客户信用值  
 	 */
-	public double getCre(){
+	public double getCredit(){
 		return credit;
 	}
 	

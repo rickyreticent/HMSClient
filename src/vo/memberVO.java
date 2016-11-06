@@ -3,17 +3,22 @@ package vo;
 public class memberVO {
 
 	private String memberID;
+	private String password;
 	private String name;
-	private String level;
-	private int credit;
-	private int phone;
+	private String birthday;
+	private double credit;
+	private String phone;
+	public memberVO() {
+		// TODO Auto-generated constructor stub
+	}
 	
-	public memberVO(String memberID,String name,String level,int credit,int phone){
+	public memberVO(String memberID,String pass,String name,String birth,String phone,double credit){
 		this.setName(name);
+		this.setPassword(pass);
 		this.setMemberID(memberID);
-		this.setLevel(level);
+		this.setBirthday(birth);
 		this.setCredit(credit);
-		this.setPhone(phone);
+		this.setTel(phone);
 	}
 
 	public String getMemberID() {
@@ -24,6 +29,13 @@ public class memberVO {
 		this.memberID = memberID;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String pass){
+		this.password=pass;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -32,27 +44,27 @@ public class memberVO {
 		this.name = name;
 	}
 
-	public String getLevel() {
-		return level;
+	public String getBirthday() {
+		return birthday;
 	}
 
-	public void setLevel(String level) {
-		this.level = level;
+	public void setBirthday(String birth) {
+		this.birthday=birth;
 	}
 
-	public int getCredit() {
+	public double getCredit() {
 		return credit;
 	}
 
-	public void setCredit(int credit) {
+	public void setCredit(double credit) {
 		this.credit = credit;
 	}
 
-	public int getPhone() {
+	public String getTel() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setTel(String phone) {
 		this.phone = phone;
 	}
 }
