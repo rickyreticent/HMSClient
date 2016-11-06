@@ -1,6 +1,7 @@
 package ui.blservice;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import vo.hotelVO;
 import vo.orderVO;
@@ -15,7 +16,7 @@ import vo.roomVO;
 
 public interface hotelblservice {	
 
-	public ArrayList<orderVO> getOrderList (String hotelID,String time);
+	public List<orderVO> getOrderList (String hotelID,String time);
 	public orderVO getOrder(String orderID);
 	public hotelVO getHotelInformat (String hotelID);
 	public boolean updataOrder (String orderID,orderVO OR);

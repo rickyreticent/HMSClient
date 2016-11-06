@@ -12,6 +12,8 @@ public class hotelVO {
 	private String district;
 	private ArrayList<roomVO> roomList;
 	
+	public hotelVO(){}
+	
 	public hotelVO(String hotelID,String name,String address,String level,String district){
 		this.setHotelID(hotelID);
 		this.setName(name);

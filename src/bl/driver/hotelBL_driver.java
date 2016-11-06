@@ -20,7 +20,7 @@ public class hotelBL_driver {
 	static int phone=110;
 	static String checkInTime="2016-10-01";
 	static String checkOutTime="2016-10-01";
-	static String roomType="A";
+	static int roomType=1;
 	static int roomNumber=110;
 	static String promotion="best";
 	static double discount=100;
@@ -37,7 +37,7 @@ public class hotelBL_driver {
 		//System.out.println(H.getMInformation(memberID));
 		System.out.println(H.updataHotelInformat(hotelID, new hotelVO(hotelID, name, address, level, district)));
 		System.out.println(H.updataOrder(orderID, new orderVO(checkInTime, checkOutTime, roomType, roomNumber,
-				promotion, discount, price)));
+				promotion, discount, price, "123")));
 	}
 	
 	public static void main(String[] args) {

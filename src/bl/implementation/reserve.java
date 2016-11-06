@@ -3,7 +3,7 @@ package bl.implementation;
 import ui.blservice.reserveblservice;
 import vo.*;
 
-public class reservebl implements reserveblservice {
+public class reserve implements reserveblservice {
 	
 	@SuppressWarnings("unused")
 	private dateVO date;
@@ -13,7 +13,7 @@ public class reservebl implements reserveblservice {
 	private promotionVO promotion;
 	private double price;
 	
-	public reservebl() {
+	public reserve() {
 		date = null;
 		days = 0;
 		promotion = null;
