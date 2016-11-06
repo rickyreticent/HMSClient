@@ -1,58 +1,79 @@
 package vo;
 
 public class promotionVO {
-	String birthday;
+	
+	dateVO birthday;
 	int roomNumber;
 	boolean coordinate;
-	String date;
+	dateVO date;
 	boolean VIP;
 	String district;
+	double discount;
 	
-	public promotionVO(String b,int rn,boolean c,String da,boolean v,String di){
-		birthday=b;
-		roomNumber=rn;
-		coordinate=c;
-		date=da;
-		VIP=v;
-		district=di;
+	public promotionVO(dateVO b, int rn, boolean c, dateVO da, boolean v, String di, double dis) {
+		birthday = b;
+		roomNumber = rn;
+		coordinate = c;
+		date = da;
+		VIP = v;
+		district = di;
+		discount = dis;
 	}
-	public String getBirday(){
+	
+	public dateVO getBirthday() {
 		return birthday;
 	}
-	public int getRoomNumber(){
+	
+	public int getRoomNumber() {
 		return roomNumber;
 	}
-	public boolean getCoordinate(){
+	
+	public boolean getCoordinate() {
 		return coordinate;
 	}
-	public String getDate(){
+	
+	public dateVO getDate() {
 		return date;
 	}
-	public boolean getVIP(){
+	
+	public boolean getVIP() {
 		return VIP;
 	}
-	public String getDistrict(){
+	
+	public String getDistrict() {
 		return district;
 	}
 	
+	public void setBirthday(dateVO birthday) {
+		this.birthday = birthday;
+	}
 	
+	public void setRoomNumber(int roomNumber) {
+		this.roomNumber = roomNumber;
+	}
 	
-	public void setBirthday(String birthday){
-		this.birthday=birthday;
+	public void setCoodinate(boolean coordinate) {
+		this.coordinate = coordinate;
 	}
-	public void setRoomNumber(int roomNumber){
-		this.roomNumber=roomNumber;
+	
+	public void setDate(dateVO date) {
+		this.date = date;
 	}
-	public void setCoodinate(boolean coordinate){
-		this.coordinate=coordinate;
+	
+	public void setVIP(boolean VIP) {
+		this.VIP = VIP;
 	}
-	public void setDate(String date){
-		this.date=date;
+	
+	public void setDistrict(String district) {
+		this.district = district;
 	}
-	public void setVIP(boolean VIP){
-		this.VIP=VIP;
+	
+	public void setDiscount(double discount) {
+		this.discount = discount;
 	}
-	public void setDistrict(String district){
-		this.district=district;
+	
+	public double getDiscount() {
+		return discount;
 	}
+	
 }

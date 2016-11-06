@@ -59,4 +59,13 @@ public class search implements searchblservice {
 	public void setHotelList(ArrayList<hotelVO> hotelList) {
 		this.hotelList = hotelList;
 	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public String getDistrict() {
+		return district;
+	}
+	
 }
