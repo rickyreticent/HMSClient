@@ -7,7 +7,7 @@ import vo.hotelVO;
 import vo.orderVO;
 import vo.roomVO;
 
-public class hotelbl implements hotelblservice{
+public class hotel implements hotelblservice{
 
 	public ArrayList<orderVO> getOrderList (String hotelID,String time){
 		return null;

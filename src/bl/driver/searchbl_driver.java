@@ -1,6 +1,6 @@
 package bl.driver;
 
-import bl.implementation.searchbl;
+import bl.implementation.search;
 import bl.stub.searchbl_stub;
 import ui.blservice.searchblservice;
 
@@ -8,7 +8,7 @@ public class searchbl_driver {
 
 	searchblservice searchbl = new searchbl_stub();
 	
-	public void drive(searchbl search) {
+	public void drive(search search) {
 		search.setAddress("XianLinBigRoad");
 		search.setDistrict("NanjingQixia");
 		search.getHotelList();
@@ -17,6 +17,6 @@ public class searchbl_driver {
 	
 	public static void main(String[] args) {
 		searchbl_driver driver = new searchbl_driver();
-		driver.drive(new searchbl());
+		driver.drive(new search());
 	}
 }

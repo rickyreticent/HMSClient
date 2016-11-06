@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import ui.blservice.memberblservice;
 import vo.memberVO;
 
-public class memberbl implements memberblservice{
+public class member implements memberblservice{
 
 	public memberVO getMInformation (String memberID){
 		return null;

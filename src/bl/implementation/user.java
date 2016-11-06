@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import ui.blservice.userblservice;
 import vo.userVO;
 
-public class userbl implements userblservice{
+public class user implements userblservice{
 
 	public userVO getUser(String userID){
 		return null;

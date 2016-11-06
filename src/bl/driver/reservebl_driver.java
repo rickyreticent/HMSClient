@@ -1,6 +1,6 @@
 package bl.driver;
 
-import bl.implementation.reservebl;
+import bl.implementation.reserve;
 import bl.stub.reservebl_stub;
 import ui.blservice.reserveblservice;
 import vo.*;
@@ -9,7 +9,7 @@ public class reservebl_driver {
 
 	reserveblservice reservebl = new reservebl_stub();
 	
-	public void drive(reservebl reserve) {
+	public void drive(reserve reserve) {
 		reserve.setDate(new dateVO(2016, 12, 5));
 		reserve.setDays(1);
 		reserve.setPromotion(new promotionVO(null, 0, false, null, false, null));
@@ -18,6 +18,6 @@ public class reservebl_driver {
 	
 	public static void main(String[] args) {
 		reservebl_driver driver = new reservebl_driver();
-		driver.drive(new reservebl());
+		driver.drive(new reserve());
 	}
 }

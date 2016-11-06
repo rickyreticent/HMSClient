@@ -2,7 +2,7 @@ package bl.implementation;
 
 import vo.promotionVO;
 
-public class promotionbl {
+public class promotion {
 	public promotionVO getPromotion(String promotionID){
 		return null;
 	}
