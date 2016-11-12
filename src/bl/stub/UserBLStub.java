@@ -2,9 +2,9 @@ package bl.stub;
 
 import java.util.ArrayList;
 
-import vo.UserRole;
 import vo.HotelVO;
 import vo.MemberVO;
+import vo.UserRole;
 import ui.blservice.UserBLService;
 
 public class UserBLStub implements UserBLService {
