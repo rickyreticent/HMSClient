@@ -1,11 +1,11 @@
-package ui.blservice;
+package ui.controller;
 
 import java.util.ArrayList;
 
 import vo.HotelVO;
 import vo.RoomVO;
 
-public interface SearchBLService {
+public interface SearchController {
 
 	public void setAddress(String address);
 	public String getAddress();

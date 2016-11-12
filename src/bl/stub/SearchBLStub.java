@@ -2,11 +2,11 @@ package bl.stub;
 
 import java.util.ArrayList;
 
-import ui.blservice.SearchBLService;
+import ui.controller.SearchController;
 import vo.HotelVO;
 import vo.RoomVO;
 
-public class SearchBLStub implements SearchBLService {
+public class SearchBLStub implements SearchController {
 
 	@Override
 	public void setAddress(String address) {

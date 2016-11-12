@@ -1,4 +1,4 @@
-package ui.blservice;
+package ui.controller;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import vo.RoomVO;
  *
  */
 
-public interface HotelBLService {	
+public interface HotelController {	
 
 	public List<OrderVO> getOrderList (String hotelID,String time);
 	public OrderVO getOrder(String orderID);

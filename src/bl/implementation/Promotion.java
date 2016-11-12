@@ -1,9 +1,9 @@
 package bl.implementation;
 
-import ui.blservice.PromotionBLService;
+import ui.controller.PromotionController;
 import vo.PromotionVO;
 
-public class Promotion implements PromotionBLService {
+public class Promotion implements PromotionController {
 	
 	public PromotionVO getPromotion(String promotionID){
 		return null;

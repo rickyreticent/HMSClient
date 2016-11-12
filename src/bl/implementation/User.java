@@ -7,11 +7,11 @@ import bl.dataservice.MemberData;
 import bl.dataservice.UserData;
 import po.HotelPO;
 import po.MemberPO;
-import ui.blservice.UserBLService;
+import ui.controller.UserController;
 import vo.HotelVO;
 import vo.MemberVO;
 
-public class User implements UserBLService {
+public class User implements UserController {
 
 	private HotelVO hotel;
 	private MemberVO member;

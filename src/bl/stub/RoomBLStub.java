@@ -1,10 +1,10 @@
 package bl.stub;
 
-import ui.blservice.RoomBLService;
+import ui.controller.RoomController;
 import vo.RoomType;
 import vo.RoomVO;
 
-public class RoomBLStub implements RoomBLService {
+public class RoomBLStub implements RoomController {
 
 	@Override
 	public RoomVO getRoom(String number) {

@@ -1,5 +1,9 @@
 package bl.junit.test;
 
+import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
 /**
  * 
  * @author	 庄刚轻

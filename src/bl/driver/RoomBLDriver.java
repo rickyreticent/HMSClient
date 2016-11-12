@@ -1,13 +1,13 @@
 package bl.driver;
 
 import bl.stub.RoomBLStub;
-import ui.blservice.RoomBLService;
+import ui.controller.RoomController;
 import vo.RoomType;
 import vo.RoomVO;
 
 public class RoomBLDriver {
 
-	RoomBLService service = new RoomBLStub();
+	RoomController service = new RoomBLStub();
 	
 	public RoomBLDriver (RoomVO room) {
 		System.out.println(service.addRoom(room));
