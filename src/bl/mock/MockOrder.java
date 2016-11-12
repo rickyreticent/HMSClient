@@ -1,150 +1,186 @@
 package bl.mock;
 
-import vo.orderVO;
+import vo.OrderVO;
 
 /**
- * Ìá¹©¶©µ¥µÄ»ù±¾ĞÅÏ¢£¨°üÀ¨¶©µ¥£©,Ìá¹©¸ü¸Ä¶©µ¥µÄ×´Ì¬£¨³·Ïú×´Ì¬¡¢Òì³£×´Ì¬¡¢Õı³£×´Ì¬£©
- * @author ĞìÑÇæº
- * @version 2016-11-04 10:52
- * @param type
- *    ·¿¼äÀàĞÍ
- * @param roomNUM 
- *    ·¿¼äºÅ
+ æä¾›memberçš„åŸºæœ¬ä¿¡æ¯ï¼ˆåŒ…æ‹¬å§“åæˆ–åç§°ï¼Œè”ç³»æ–¹å¼ã€ä¿¡ç”¨ï¼‰å’Œä¿®æ”¹æœåŠ¡
+ * @author å©§å©§
+ * @version 2016-11-04 11:43
+ * @param checkInTime 
+ *   å…¥ä½æ—¶é—´
+ * @param days
+ *   å…¥ä½å¤©æ•°
+ * @param roomType
+ *   æˆ¿é—´ç±»å‹    
+ * @param roomNumber
+ *   æˆ¿é—´æ•°é‡
+ * @param Promotion
+ *   è¥é”€ç­–ç•¥
  * @param price
- *    ·¿¼äµ¥¼Û
- * @param isCancel
- *    ·¿¼ä³·Ïú×´Ì¬       
- * @param isAbnormal
- *    ·¿¼äÒì³£×´Ì¬      
- *
+ *   ä»·æ ¼    
+ * @param
  */
-public class MockOrder {
+ 
+public class MockOrder extends OrderVO {
+	
 	private String checkInTime;
 	private int days;
 	private int roomType;
 	private int roomNumber;
 	private String promotion;
 	private double price;
-	private boolean isCancel;
-	private boolean isAbnormal;
+	private String orderID;
+	private int state;//1ï¼Œå·²ç»æ‰§è¡Œï¼›2ï¼Œæœªæ‰§è¡Œï¼›3ï¼Œå¼‚å¸¸ï¼›4ï¼Œæ’¤é”€
 	
-	public MockOrder(String ci, int da, int rt, int rn, String pro,double pri,boolean ic,boolean ia) {
-		/**
-		 *  ¹¹ÔìMockOrderµÄ·½·¨£¬È·¶¨·¿¼äµÄÀàĞÍ¡¢·¿¼äºÅºÍµ¥¼Û
-		 *  @param ci 
-		 *    Èë×¡Ê±¼ä
-		 *  @param da
-		 *    Èë×¡ÌìÊı
-		 *  @param rt
-		 *    ·¿¼äÀàĞÍ
-		 *  @param rn
-		 *    ·¿¼äÊıÁ¿      
-		 *  @param pro
-		 *    ÓªÏú²ßÂÔ 
-		 *  @param pri
-		 *    ¶©µ¥×Ü¼Û¸ñ
-		 * @param isCancel
-		 *    ·¿¼ä³·Ïú×´Ì¬       
-		 * @param isAbnormal
-		 *    ·¿¼äÒì³£×´Ì¬      
-		 */
-		checkInTime=ci;
-		days=da;
-		roomType=rt;
-		roomNumber=rn;
-		promotion=pro;
-		price=pri;
-		isCancel=ic;
-		isAbnormal=ia;
+	public String getOrderID() {
+		return orderID;
 	}
+	
+	/**
+	@param checkInTime 
+	 *   å…¥ä½æ—¶é—´
+	 * @param days
+	 *   å…¥ä½å¤©æ•°
+	 * @param roomType
+	 *   æˆ¿é—´ç±»å‹    
+	 * @param roomNumber
+	 *   æˆ¿é—´æ•°é‡
+	 * @param Promotion
+	 *   è¥é”€ç­–ç•¥
+	 * @param price
+	 *   ä»·æ ¼    
+	 */
+	public MockOrder(String orID,int state,String ci, int da, int rt, int rn, String pro,double pri) {
+		
+		orderID = orID;
+		this.setState(state);
+		checkInTime = ci;
+		days = da;
+		roomType = rt;
+		roomNumber = rn;
+		promotion = pro;
+		price = pri;
+
+	}
+	
+	/**
+	 * æŸ¥çœ‹å…¥ä½æ—¶é—´
+	 * @return ä»¥Stringä¸ºè¡¨ç¤ºå…¥ä½æ—¶é—´
+	 */
 	public String getCheckInTime(){
-		/**
-		 * ²é¿´Èë×¡Ê±¼ä
-		 * @return ÒÔ×Ö·û´®Îª´ú±íµÄÈë×¡Ê±¼ä
-		 * @author ĞìÑÇæº
-		 * @version 2016-11-04 11:29
-		 */
 		return checkInTime;
 	}
+	
+	/**
+	 * æŸ¥çœ‹å…¥ä½å¤©æ•°
+	 * @return ä»¥æ•´æ•°ä¸ºè¡¨ç¤ºå…¥ä½å¤©æ•°
+	 */
 	public int getDays(){
-		/**
-		 * ²é¿´Èë×¡ÌìÊı
-		 * @return ÒÔÕûÊıÎª´ú±íµÄÈë×¡ÌìÊı
-		 * @author ĞìÑÇæº
-		 * @version 2016-11-04 11:30
-		 */
 		return days;
 	}
+	
+	/**
+	 * æŸ¥çœ‹å…¥ä½çš„æˆ¿é—´ç±»å‹
+	 * @return ä»¥æ•´æ•°ä¸ºè¡¨ç¤ºå…¥ä½æˆ¿é—´ç±»å‹
+	 */
 	public int getRoomType(){
-		/**
-		 * ²é¿´×¡·¿ÀàĞÍ
-		 * @return ÒÔÕûÊıÎª´ú±íµÄÈë×¡Ê±¼ä
-		 * @author ĞìÑÇæº
-		 * @version 2016-11-04 11:30
-		 */
 		return roomType;
 	}
+	
+	/**
+	 * æŸ¥çœ‹å…¥ä½çš„æˆ¿é—´æ•°é‡
+	 * @return ä»¥æ•´æ•°ä¸ºè¡¨ç¤ºå…¥ä½æˆ¿é—´æ•°é‡
+	 */
 	public int getRoomNumber(){
-		/**
-		 * ²é¿´×¡·¿ÊıÁ¿
-		 * @return ÒÔÕûÊıÎª´ú±íµÄ×¡·¿ÊıÁ¿
-		 * @author ĞìÑÇæº
-		 * @version 2016-11-04 11:33
-		 */
 		return roomNumber;
 	}
+	
+	/**
+	 * æŸ¥çœ‹è¥é”€ç­–ç•¥
+	 * @return ä»¥stringä¸ºè¡¨ç¤ºè¥é”€ç­–ç•¥
+	 */
 	public String getPromotion(){
-		/**
-		 * ²é¿´ÓªÏú²ßÂÔ
-		 * @return ÒÔ×Ö·û´®Îª´ú±íµÄÓªÏú²ßÂÔ
-		 * @author ĞìÑÇæº
-		 * @version 2016-11-04 11:35
-		 */
 		return promotion;
 	}
+	
+	/**
+	 * æŸ¥çœ‹è®¢å•æ€»ä»·æ ¼
+	 * @return ä»¥æ•´æ•°ä¸ºè¡¨ç¤ºè®¢å•ä»·æ ¼
+	 */
 	public double getPrice(){
-		/**
-		 * ²é¿´¼Û¸ñ
-		 * @return ÒÔ¸¡µãÊıÎª´ú±íµÄ¼Û¸ñ
-		 * @author ĞìÑÇæº
-		 * @version 2016-11-04 11:37
-		 */
 		return price;
 	}
-	public boolean Cancel(){
-		/**
-		 * ½«¶©µ¥ÉèÖÃÎª³·Ïú×´Ì¬
-		 * @return ÒÔ²¼¶ûÖµÎª´ú±íµÄ½«¶©µ¥ÉèÖÃÎª³·Ïú×´Ì¬
-		 * @author ĞìÑÇæº
-		 * @version 2016-11-04 11:46
-		 */
-		if(isCancel) 
-			return false;
-		isCancel=true;
-		return true;
+	
+	/**
+	 * æŸ¥çœ‹è®¢å•çŠ¶æ€
+	 * @return ä»¥æ•´æ•°ä¸ºè¡¨ç¤ºè®¢å•çŠ¶æ€ï¼ˆ1ï¼Œå·²ç»æ‰§è¡Œï¼›2ï¼Œæœªæ‰§è¡Œï¼›3ï¼Œå¼‚å¸¸ï¼›4ï¼Œæ’¤é”€ï¼‰
+	 */
+	public int getState() {
+		return state;
 	}
-	public boolean Abnormal(){
-		/**
-		 * ½«¶©µ¥ÉèÖÃÎªÒì³£×´Ì¬
-		 * @return ÒÔ²¼¶ûÖµÎª´ú±íµÄ½«¶©µ¥ÉèÖÃÎªÒì³£×´Ì¬
-		 * @author ĞìÑÇæº
-		 * @version 2016-11-04 11:46
-		 */
-		if(isAbnormal) 
-			return false;
-		isAbnormal=true;
-		return true;
+	
+	/**
+	 * è®¾ç½®è®¢å•çŠ¶æ€
+	 * @param ä»¥æ•´æ•°ä¸ºè¡¨ç¤ºè®¢å•çŠ¶æ€ï¼ˆ1ï¼Œå·²ç»æ‰§è¡Œï¼›2ï¼Œæœªæ‰§è¡Œï¼›3ï¼Œå¼‚å¸¸ï¼›4ï¼Œæ’¤é”€ï¼‰
+	 */
+	public void setState(int state) {
+		this.state = state;
 	}
-	public boolean CancelAbnormal(){
-		/**
-		 * ½«ÉêËß³É¹¦µÄÒì³£¶©µ¥ÉèÖÃÎª³·Ïú×´Ì¬
-		 * @return ÒÔ²¼¶ûÖµÎª´ú±íµÄ½«Òì³£¶©µ¥ÉèÖÃÎª³·Ïú×´Ì¬
-		 * @author ĞìÑÇæº
-		 * @version 2016-11-04 11:50
-		 */
-		if(isCancel) 
-			return false;
-		isCancel=false;
-		return true;
+	
+	/**
+	 * è®¾ç½®å…¥ä½æ—¶é—´
+	 * @param å…¥ä½æ—¶é—´
+	 */
+	public void setCheckInTime(String checkInTime){
+		this.checkInTime=checkInTime;
 	}
+	
+	/**
+	 * è®¾ç½®å…¥ä½å¤©æ•°
+	 * @param å…¥ä½å¤©æ•°
+	 */
+	public void setDays(int days){
+		this.days=days;
+	}
+	
+	/**
+	 * è®¾ç½®å…¥ä½æˆ¿é—´ç±»å‹
+	 * @param å…¥ä½æˆ¿é—´ç±»å‹
+	 */
+	public void setRoomType(int roomType){
+		this.roomType=roomType;
+	}
+	
+	/**
+	 * è®¾ç½®å…¥ä½æˆ¿é—´æ•°é‡
+	 * @param å…¥ä½æˆ¿é—´æ•°é‡
+	 */
+	public void setRoomNumber(int roomNumber){
+		this.roomNumber=roomNumber;
+	}
+	
+	/**
+	 * è®¾ç½®å…¥ä½è¥é”€ç­–ç•¥
+	 * @param å…¥ä½è¥é”€ç­–ç•¥
+	 */
+	public void setPromotion(String promotion){
+		this.promotion=promotion;
+	}
+	
+	/**
+	 * è®¾ç½®è®¢å•æ€»ä»·æ ¼
+	 * @param è®¢å•æ€»ä»·æ ¼
+	 */
+	public void setPrice(double price){
+		this.price=price;
+	}
+	
+	/**
+	 * è®¾ç½®è®¢å•ID
+	 * @param è®¢å•ID
+	 */
+	public void setOrderID(String orderID) {
+		this.orderID = orderID;
+	}
+	
 }
