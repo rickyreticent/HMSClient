@@ -1,8 +1,8 @@
 package bl.stub;
 
-import ui.blservice.LoginBLService;
+import ui.controller.LoginController;
 
-public class LoginBLStub implements LoginBLService {
+public class LoginBLStub implements LoginController {
 
 	@Override
 	public boolean isCorrect(String ID, String password) {

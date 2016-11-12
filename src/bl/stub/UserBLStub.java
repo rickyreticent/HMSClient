@@ -2,12 +2,12 @@ package bl.stub;
 
 import java.util.ArrayList;
 
+import ui.controller.UserController;
 import vo.HotelVO;
 import vo.MemberVO;
 import vo.UserRole;
-import ui.blservice.UserBLService;
 
-public class UserBLStub implements UserBLService {
+public class UserBLStub implements UserController {
 
 	private String ID="541322049";
 	private String phone="541322049";

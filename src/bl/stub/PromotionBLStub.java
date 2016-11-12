@@ -1,11 +1,11 @@
 package bl.stub;
 
-import ui.blservice.PromotionBLService;
+import ui.controller.PromotionController;
 import vo.DateVO;
 import vo.PromotionVO;
 
 
-public class PromotionBLStub implements PromotionBLService {
+public class PromotionBLStub implements PromotionController {
 	
 	public PromotionVO getPromotion(String promotionID) {
 		return new PromotionVO(new DateVO(1997, 3, 4), 1, false, new DateVO(2016, 2, 11), false, promotionID, 0.8);

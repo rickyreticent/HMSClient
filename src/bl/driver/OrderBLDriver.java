@@ -1,12 +1,12 @@
 package bl.driver;
 
 import bl.stub.OrderBLStub;
-import ui.blservice.OrderBLService;
+import ui.controller.OrderController;
 import vo.OrderVO;
 
 public class OrderBLDriver {
 	
-	OrderBLService orderbl = new OrderBLStub();
+	OrderController orderbl = new OrderBLStub();
 	
 	public void drive(OrderVO ordervo){
 		System.out.println(orderbl.addOrder(ordervo));

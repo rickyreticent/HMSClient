@@ -1,6 +1,6 @@
-package ui.blservice;
+package ui.controller;
 
-public interface LoginBLService {
+public interface LoginController {
 
 	public boolean isCorrect(String ID,String password);
 	public boolean isValid(String ID,String password);
