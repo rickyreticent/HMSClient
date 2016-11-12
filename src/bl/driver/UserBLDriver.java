@@ -1,8 +1,8 @@
 package bl.driver;
 
 import bl.stub.UserBLStub;
-import vo.MemberVO;
 import ui.blservice.UserBLService;
+import vo.MemberVO;
 
 public class UserBLDriver {
 	
