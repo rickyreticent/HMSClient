@@ -1,7 +1,7 @@
-package ui.blservice;
+package ui.controller;
 import vo.OrderVO;
 
-public interface OrderBLService {
+public interface OrderController {
 	public OrderVO getOrder();
 	public boolean addOrder(OrderVO order);
 	public boolean cancelOrder(OrderVO order) ;

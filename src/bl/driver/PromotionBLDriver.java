@@ -1,13 +1,13 @@
 package bl.driver;
 
 import bl.stub.PromotionBLStub;
-import ui.blservice.PromotionBLService;
+import ui.controller.PromotionController;
 import vo.DateVO;
 import vo.PromotionVO;
 
 public class PromotionBLDriver {
 	
-	PromotionBLService promotion = new PromotionBLStub();
+	PromotionController promotion = new PromotionBLStub();
 	
 	public void drive(PromotionVO uservo){
 		System.out.println(promotion.addPromotion(uservo));

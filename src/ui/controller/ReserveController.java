@@ -1,9 +1,9 @@
-package ui.blservice;
+package ui.controller;
 
 import vo.DateVO;
 import vo.PromotionVO;
 
-public interface ReserveBLService {
+public interface ReserveController {
 
 	public void setDate(DateVO date);
 	public void setDays(int days);

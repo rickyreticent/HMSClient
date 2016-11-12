@@ -1,9 +1,9 @@
 package bl.implementation;
 
-import ui.blservice.RoomBLService;
+import ui.controller.RoomController;
 import vo.RoomVO;
 
-public class Room implements RoomBLService {
+public class Room implements RoomController {
 
 	public RoomVO getRoom(String number) {
 		return null;

@@ -2,12 +2,12 @@ package bl.implementation;
 
 import java.util.List;
 
-import ui.blservice.HotelBLService;
+import ui.controller.HotelController;
 import vo.HotelVO;
 import vo.OrderVO;
 import vo.RoomVO;
 
-public class Hotel implements HotelBLService{
+public class Hotel implements HotelController{
 
 	public Order ordermanager = new Order();
 	private String ID;

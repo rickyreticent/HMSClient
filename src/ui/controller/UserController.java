@@ -1,11 +1,11 @@
-package ui.blservice;
+package ui.controller;
 
 import java.util.ArrayList;
 
 import vo.HotelVO;
 import vo.MemberVO;
 
-public interface UserBLService {
+public interface UserController {
 	public HotelVO getHotel(String hotelID);
 	public boolean updateHotel(HotelVO hotel);
 	public boolean addHotel(HotelVO hotel);

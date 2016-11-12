@@ -1,12 +1,12 @@
 package bl.driver;
 
 import bl.stub.UserBLStub;
-import ui.blservice.UserBLService;
+import ui.controller.UserController;
 import vo.MemberVO;
 
 public class UserBLDriver {
 	
-	UserBLService userbl = new UserBLStub();;
+	UserController userbl = new UserBLStub();;
 	
 	public void drive(MemberVO uservo){
 		System.out.println(userbl.addMember(uservo));
