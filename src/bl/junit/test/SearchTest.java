@@ -10,6 +10,11 @@ import bl.implementation.Search;
 import bl.mock.MockHotel;
 import vo.HotelVO;
 
+/**
+ * Search的测试类
+ * @author CROFF
+ * @version 2016-11-09
+ */
 public class SearchTest {
 
 	private Search s;

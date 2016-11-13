@@ -12,8 +12,8 @@ public class Order {
 		orderList = new ArrayList<OrderVO>();
 	}
 	
-	public OrderVO getOrder(String orderID){
-		for(int i=0;i<orderList.size();i++){
+	public OrderVO getOrder(String orderID) {
+		for(int i=0; i<orderList.size(); i++) {
 			if(orderList.get(i).getOrderID().equals(orderID)){
 				return orderList.get(i);
 			}
@@ -27,15 +27,33 @@ public class Order {
 	}
     
     public boolean cancelOrder(String orderID) {
-		return true;
+    	for(int i=0; i<orderList.size(); i++) {
+			if(orderList.get(i).getOrderID().equals(orderID)){
+				orderList.get(i).setState(4);
+				return true;
+			}
+    	}
+    	return false;
 	}
     
     public boolean abnormalOrder(String orderID) {
-		return true;
+    	for(int i=0; i<orderList.size(); i++) {
+			if(orderList.get(i).getOrderID().equals(orderID)){
+				orderList.get(i).setState(3);
+				return true;
+			}
+    	}
+    	return false;
 	}
     
     public boolean cancelAbnormalOrder(String orderID) {
-		return true;
+    	for(int i=0; i<orderList.size(); i++) {
+			if(orderList.get(i).getOrderID().equals(orderID)){
+				orderList.get(i).setState(4);
+				return true;
+			}
+    	}
+    	return false;
 	}
     
     public List<OrderVO> getOrderList() {
