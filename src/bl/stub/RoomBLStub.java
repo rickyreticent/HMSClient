@@ -1,17 +1,9 @@
 package bl.stub;
 
 import ui.controller.RoomController;
-import vo.RoomType;
 import vo.RoomVO;
 
 public class RoomBLStub implements RoomController {
-
-	@Override
-	public RoomVO getRoom(String number) {
-		// TODO Auto-generated method stub
-		System.out.println("----查找房间———");
-		return new RoomVO(true, 512, RoomType.Normal, 280);
-	}
 
 	@Override
 	public boolean addRoom(RoomVO room) {
@@ -21,9 +13,16 @@ public class RoomBLStub implements RoomController {
 	}
 
 	@Override
-	public boolean deleteRoom(RoomVO room) {
+	public RoomVO findRoom(String num) {
 		// TODO Auto-generated method stub
-		System.out.println("----删除房间———");
+		System.out.println("----查找房间———");
+		return new RoomVO(true, "512",0, 280);
+	}
+
+	@Override
+	public boolean updateRoom(RoomVO room) {
+		// TODO Auto-generated method stub
+		System.out.println("----更新房间----");
 		return true;
 	}
 

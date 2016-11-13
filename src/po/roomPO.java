@@ -9,11 +9,11 @@ public class roomPO implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	private boolean valid;
-	private int number;
-	private RoomType type;
-	private int price;
+	private String number;
+	private int type;
+	private double price;
 	
-	public roomPO(boolean valid, int number,RoomType type,int price){
+	public roomPO(boolean valid, String number,int type,double price){
 		this.valid =valid;
 		this.number=number;
 		this.type=type;
@@ -24,15 +24,15 @@ public class roomPO implements Serializable{
 		return valid;
 	}
 	
-	public int getNumber(){
+	public String getNumber(){
 		return number;
 	}
 	
-	public RoomType getRoomType(){
+	public int getRoomType(){
 		return type;
 	}
 	
-	public int getPrice(){
+	public double getPrice(){
 		return price;
 	}
 	

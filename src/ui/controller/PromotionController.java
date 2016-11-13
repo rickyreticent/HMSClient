@@ -1,5 +1,7 @@
 package ui.controller;
 
+import java.util.ArrayList;
+
 import vo.PromotionVO;
 
 public interface PromotionController {
@@ -7,5 +9,5 @@ public interface PromotionController {
 	public boolean addPromotion(PromotionVO promotion);
 	public boolean delPromotion(PromotionVO promotion) ;
 	public boolean changePromotion(PromotionVO promotion);
-	public PromotionVO[] getPromotionList();
+	public ArrayList<PromotionVO> getPromotionList();
 }

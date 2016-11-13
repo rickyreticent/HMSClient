@@ -1,5 +1,7 @@
 package bl.stub;
 
+import java.util.ArrayList;
+
 import ui.controller.PromotionController;
 import vo.DateVO;
 import vo.PromotionVO;
@@ -8,7 +10,7 @@ import vo.PromotionVO;
 public class PromotionBLStub implements PromotionController {
 	
 	public PromotionVO getPromotion(String promotionID) {
-		return new PromotionVO(new DateVO(1997, 3, 4), 1, false, new DateVO(2016, 2, 11), false, promotionID, 0.8);
+		return new PromotionVO(new DateVO(1997, 3, 4), 1, false, new DateVO(2016, 2, 11), false, promotionID, 0.8, "0011");
 	}
 	
     public boolean addPromotion(PromotionVO promotion) {
@@ -26,7 +28,7 @@ public class PromotionBLStub implements PromotionController {
 		return true;
 	}
     
-    public PromotionVO[] getPromotionList() {
+    public ArrayList<PromotionVO> getPromotionList() {
 		return null;
     }
     

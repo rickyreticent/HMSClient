@@ -1,4 +1,11 @@
 eclipse.preferences.version=1
+encoding//src/bl/junit/test/HotelTest.java=UTF-8
+encoding//src/bl/junit/test/OrderTest.java=UTF-8
+encoding//src/bl/junit/test/PromotionTest.java=UTF-8
+encoding//src/bl/junit/test/ReserveTest.java=UTF-8
+encoding//src/bl/mock/MockOrder.java=UTF-8
+encoding//src/bl/mock/MockPromotion.java=UTF-8
 encoding//src/bl/mock/MockRoom.java=UTF-8
+encoding//src/vo/OrderVO.java=UTF-8
 encoding/<project>=UTF-8
 separateDerivedEncodings=true
