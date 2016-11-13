@@ -2,7 +2,6 @@ package bl.driver;
 
 import bl.stub.RoomBLStub;
 import ui.controller.RoomController;
-import vo.RoomType;
 import vo.RoomVO;
 
 public class RoomBLDriver {

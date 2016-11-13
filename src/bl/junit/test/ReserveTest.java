@@ -8,6 +8,11 @@ import bl.implementation.Reserve;
 import bl.mock.MockDate;
 import bl.mock.MockPromotion;
 
+/**
+ * Reserve的测试类
+ * @author CROFF
+ * @version 2016-11-13
+ */
 public class ReserveTest {
 	
 	private Reserve r;
