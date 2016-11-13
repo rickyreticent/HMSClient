@@ -125,7 +125,7 @@ public class MockMember extends MemberVO {
 	 * @version 2016-11-04 14:45
 	 * @return 以String为表示的客户账号  
 	 */
-	public String getAccout(){
+	public String getMemberID(){
 		return account;
 	}
 	

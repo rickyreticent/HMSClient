@@ -110,6 +110,7 @@ public class User implements UserController {
 		//HotelPO temp = new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
 		new MemberPO(member.getMemberID(),member.getName(), member.getPassword(), member.getBirthday(), member.getCredit(),member.getTel());
 		//hot.updataHotelInformat(hotel.getHotelID(), temp);
+		System.out.println(this.member.getCredit());
 		return true;
 	}
 
