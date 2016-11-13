@@ -9,7 +9,7 @@ import vo.PromotionVO;
 public class Promotion implements PromotionController {
 	private String ID;
 	private PromotionVO promotion;
-	private ArrayList<PromotionVO> promotionList=new ArrayList<PromotionVO>;
+	private ArrayList<PromotionVO> promotionList = new ArrayList<PromotionVO>();
 	
 	public PromotionVO getPromotion(String promotionID){
 		for(int i=0;i<promotionList.size();i++){
