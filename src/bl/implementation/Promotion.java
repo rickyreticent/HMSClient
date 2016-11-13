@@ -3,7 +3,6 @@ package bl.implementation;
 import java.util.ArrayList;
 
 import ui.controller.PromotionController;
-import vo.HotelVO;
 import vo.PromotionVO;
 
 public class Promotion implements PromotionController {
