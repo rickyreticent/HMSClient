@@ -28,8 +28,8 @@ public class MockPromotion extends PromotionVO {
 	 * @param district 目标酒店商圈
 	 * @param discount 折扣
 	 */
-	public MockPromotion(DateVO birthday, int roomNumber, boolean isCoordinate, DateVO date, boolean isVIP, String district, double discount) {
-		super(birthday, roomNumber, isCoordinate, date, isVIP, district, discount);
+	public MockPromotion(DateVO birthday, int roomNumber, boolean isCoordinate, DateVO date, boolean isVIP, String district, double discount, String id) {
+		super(birthday, roomNumber, isCoordinate, date, isVIP, district, discount, id);
 	}
 	
 	/**

@@ -21,7 +21,7 @@ import vo.RoomVO;
  */
 public class MockRoom extends RoomVO {
 	private int type;
-	private int roomNUM;
+	private String roomNUM;
 	private double price;
 	private boolean isValid;
 	
@@ -34,7 +34,7 @@ public class MockRoom extends RoomVO {
 	 *  @param pr
 	 *    房间单价      
 	 */
-	public MockRoom(int t, int number, double pr) {
+	public MockRoom(int t, String number, double pr) {
 		type=t;
 		roomNUM=number;
 		price=pr;
@@ -57,7 +57,7 @@ public class MockRoom extends RoomVO {
 	 * @author 张新悦
 	 * @version 2016-11-04 09:50
 	 */
-	public int getNumber() {
+	public String getNumber() {
 		return roomNUM;
 	}
 	
