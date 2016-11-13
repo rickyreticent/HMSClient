@@ -1,6 +1,7 @@
 package bl.stub;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import ui.controller.MemberController;
 import vo.MemberVO;
@@ -40,7 +41,7 @@ public class MemberBLStub implements MemberController {
 	}
 
 	@Override
-	public ArrayList<String> getCreditList(String memberID) {
+	public List<String> getCreditList(String memberID) {
 		// TODO Auto-generated method stub
 		ArrayList<String> creditList = new ArrayList<String>();
 		creditList.add("2016-10-01			+100");
@@ -54,7 +55,7 @@ public class MemberBLStub implements MemberController {
 	}
 
 	@Override
-	public boolean updateCredit(String memberID, String newCredit) {
+	public boolean updateCredit(String memberID, double newCredit) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -72,7 +73,7 @@ public class MemberBLStub implements MemberController {
 	}
 
 	@Override
-	public ArrayList<OrderVO> gerOrderList(String userID) {
+	public List<OrderVO> gerOrderList(String userID) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -84,19 +85,19 @@ public class MemberBLStub implements MemberController {
 	}
 
 	@Override
-	public ArrayList<OrderVO> getUnOrder(ArrayList<OrderVO> orderList) {
+	public List<OrderVO> getUnOrder(ArrayList<OrderVO> orderList) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ArrayList<OrderVO> getAlOrder(ArrayList<OrderVO> orderList) {
+	public List<OrderVO> getAlOrder(ArrayList<OrderVO> orderList) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public ArrayList<OrderVO> getAandCOrder(ArrayList<OrderVO> orderList) {
+	public List<OrderVO> getAandCOrder(ArrayList<OrderVO> orderList) {
 		// TODO Auto-generated method stub
 		return null;
 	}

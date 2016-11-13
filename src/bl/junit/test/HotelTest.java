@@ -18,8 +18,11 @@ import bl.implementation.*;;
 public class HotelTest {
 	
 	private Hotel hotel;
+
 	MockOrder order1;
 	MockOrder order2;
+	MockRoom room1;
+	MockRoom room2;
 	@Before
 	public void setUp(){
 		hotel=new Hotel("123", null, null, null, null);
@@ -44,11 +47,10 @@ public class HotelTest {
 		assertEquals((MockOrder)hotel.getOrder("1100"),order1);
 		assertEquals((MockOrder)hotel.getOrder("1101"),order2);
 	}
-//	@Test
-//	public void testGetHotelInformat(){
-//		MockHotel temHotel=new MockHotel("123", null, null, null, null, null);
-//		assertEquals((MockHotel)hotel.getHotelInformat(hotel.getID()),temHotel);
-//	}
+	@Test
+	public void testGetHotelInformat(){
+		assertEquals(hotel.getHotelInformat(hotel.getID()),hotel.getVO());
+	}
 	@Test
 	public void testUpdataOrder(){
 		hotel.ordermanager.addOrder(order1);
@@ -63,5 +65,20 @@ public class HotelTest {
 		hotel.delay(order3.getOrderID());
 		order3.setState(2);
 		assertEquals(hotel.getOrder(order3.getOrderID()),order3);
+	}
+	
+	@Test
+	public void testUpdataHotelInformat(){
+		Hotel x=new Hotel("123", "155", null, null, null);
+		hotel.updataHotelInformat(hotel.getID(), x.getVO());
+		assertEquals(hotel.getHotelInformat(hotel.getID()),x.getVO());
+	}
+	@Test
+	public void testCheck(){
+		room1=new MockRoom(1, "123", 321);
+		room2=new MockRoom(2,"222",555);
+		hotel.roommanager.addRoom(room1);
+		hotel.roommanager.updateRoom(room2);
+		assertEquals((MockRoom)hotel.roommanager.findRoom(room2.getNumber()),room2);
 	}
 }

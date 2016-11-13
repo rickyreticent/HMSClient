@@ -1,46 +1,83 @@
 package bl.implementation;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import ui.controller.MemberController;
 import vo.MemberVO;
 import vo.OrderVO;
 
 public class Member implements MemberController {
+	
+	public Order ordermanager = new Order();
+	
+	private String ID;
+	private String password;
+	private String name;
+	private String birthday;
+	private String phone;
+	private double credit;
+	private MemberVO vo;
+	private List<String> creditList;
+	public Member(String ID,String password,String birthday,String name,String phone,double credit) {
+		setID(ID);
+		this.password=password;
+		this.name=name;
+		this.birthday=birthday;
+		this.phone=phone;
+		this.credit=credit;
+		//creditList.add(""+credit);
+	}
 
 	public MemberVO getMInformation (String memberID) {
-		return null;
+		return vo;
 	}
 	public boolean saveMInformation (String memberID, MemberVO M) {
+		if(memberID.equals(ID)){
+			setVo(vo);
+			return true;
+		}
 		return false;
 	}
-	public ArrayList<String> getCreditList (String memberID) {
-		return null;
+	public List<String> getCreditList (String memberID) {
+		return creditList;
 	}
 	@Override
 	public String getCredit(String memberID) {
 		// TODO Auto-generated method stub
-		return null;
+		return ""+credit;
 	}
 	@Override
-	public boolean updateCredit(String memberID, String newCredit) {
+	public boolean updateCredit(String memberID, double newCredit) {
 		// TODO Auto-generated method stub
+		if(memberID.equals(ID)){
+			setCredit(newCredit);
+			//creditList.add(""+credit);
+			return true;
+		}
 		return false;
 	}
 	@Override
 	public boolean checkCredit(String memberID) {
 		// TODO Auto-generated method stub
+		if(credit>=0){
+			return true;
+		}
 		return false;
 	}
 	@Override
 	public OrderVO getOrder(String orderID) {
 		// TODO Auto-generated method stub
-		return null;
+		return ordermanager.getOrder(orderID);
 	}
 	@Override
-	public ArrayList<OrderVO> gerOrderList(String userID) {
+	public List<OrderVO> gerOrderList(String userID) {
 		// TODO Auto-generated method stub
-		return null;
+		if(ID.equals(userID)){
+			return ordermanager.getOrderList();
+		} else {
+			return null;
+		}
 	}
 	@Override
 	public void cancelOrder(String orderID) {
@@ -62,5 +99,57 @@ public class Member implements MemberController {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public double getCredit() {
+		return credit;
+	}
+	public void setCredit(double credit) {
+		this.credit = credit;
+	}
+
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		ID = iD;
+	}
+
+	public MemberVO getVo() {
+		return vo;
+	}
+
+	public void setVo(MemberVO vo) {
+		this.vo = vo;
+	}
+
+	public List<String> getCreditList() {
+		return creditList;
+	}
+
 	
 }

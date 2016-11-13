@@ -10,6 +10,7 @@ import vo.RoomVO;
 public class Hotel implements HotelController{
 
 	public Order ordermanager = new Order();
+	public Room roommanager = new Room();
 	private String ID;
 	private HotelVO VO;
 	private String name;
@@ -17,9 +18,10 @@ public class Hotel implements HotelController{
 	private String level;
 	private String district;
 	
+	
 	public Hotel(String hotelID, String name, String address, String level, String district) {
 		setID(hotelID);
-		VO = new HotelVO(hotelID, name, address, level, district);
+		//VO = new HotelVO(hotelID, name, address, level, district);
 		this.setName(name);
 		this.setAddress(address);
 		this.setLevel(level);
@@ -53,11 +55,15 @@ public class Hotel implements HotelController{
 	}
 	
 	public boolean updataHotelInformat (String hotelID,HotelVO HO){
+		if(getID().equals(hotelID)){
+			setVO(HO);
+		}
 		return false;
 	}
 	
 	public boolean check (String orderID,String memberID,String roomID,RoomVO RO,int mark){
-		return false;
+		roommanager.updateRoom(RO);
+		return true;
 	}
 	
 	@Override
@@ -77,6 +83,12 @@ public class Hotel implements HotelController{
 		return false;
 	}
 	
+	public void setVO(HotelVO vO) {
+		VO = vO;
+	}
+	public HotelVO getVO() {
+		return VO;
+	}
 	public String getName() {
 		return name;
 	}
