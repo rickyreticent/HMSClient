@@ -10,7 +10,7 @@ import vo.RoomVO;
  */
 public interface RoomController {
 
-	public void addRoom(RoomVO room);
+	public boolean addRoom(RoomVO room);
 	public RoomVO findRoom(String num);
-	public void updateRoom(RoomVO room);
+	public boolean updateRoom(RoomVO room);
 }

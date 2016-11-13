@@ -28,7 +28,7 @@ public class HotelBLDriver {
 	static double price = 10;
 	
 	static String roomID = "0000";
-	static RoomVO RO = new RoomVO(true, 111, null,(int) price);
+	static RoomVO RO = new RoomVO(true, "111", 0,price);
 	
 	public void drive(HotelController H) {
 		System.out.println(H.getHotelInformat(hotelID));

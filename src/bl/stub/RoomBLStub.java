@@ -6,9 +6,10 @@ import vo.RoomVO;
 public class RoomBLStub implements RoomController {
 
 	@Override
-	public void addRoom(RoomVO room) {
+	public boolean addRoom(RoomVO room) {
 		// TODO Auto-generated method stub
 		System.out.println("----新添房间———");
+		return true;
 	}
 
 	@Override
@@ -19,9 +20,10 @@ public class RoomBLStub implements RoomController {
 	}
 
 	@Override
-	public void updateRoom(RoomVO room) {
+	public boolean updateRoom(RoomVO room) {
 		// TODO Auto-generated method stub
 		System.out.println("----更新房间----");
+		return true;
 	}
 
 }
