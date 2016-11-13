@@ -45,8 +45,9 @@ public class User implements UserController {
 	public boolean updateHotel(HotelVO hotel) {
 		// TODO Auto-generated method stub
 		this.hotel=hotel;
-		HotelPO temp = new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
-		hot.updataHotelInformat(hotel.getHotelID(), temp);
+		//HotelPO temp = new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
+		new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
+		//hot.updataHotelInformat(hotel.getHotelID(), temp);
 		return true;
 	}
 
@@ -54,8 +55,9 @@ public class User implements UserController {
 	public boolean addHotel(HotelVO hotel) {
 		// TODO Auto-generated method stub
 		this.hotel=hotel;
-		HotelPO temp = new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
-		user.addHotel(temp);
+		//HotelPO temp = new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
+		//user.addHotel(temp);
+		new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
 		return true;
 	}
 
@@ -63,9 +65,11 @@ public class User implements UserController {
 	public boolean deleteHotel(HotelVO hotel) {
 		// TODO Auto-generated method stub
 		this.hotel=hotel;
-		HotelPO temp = new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
-		user.deleteHotel(temp);
-		return true;
+		//HotelPO temp = new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
+		//user.deleteHotel(temp);
+		 new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
+		hotel=null;
+		 return true;
 	}
 
 	@Override
@@ -102,15 +106,20 @@ public class User implements UserController {
 	@Override
 	public boolean updateMember(MemberVO member) {
 		// TODO Auto-generated method stub
-		return false;
+		this.member=member;
+		//HotelPO temp = new HotelPO(hotel.getHotelID(), hotel.getName(), hotel.getAddress(), hotel.getLevel(), hotel.getDistrict());
+		new MemberPO(member.getMemberID(),member.getName(), member.getPassword(), member.getBirthday(), member.getCredit(),member.getTel());
+		//hot.updataHotelInformat(hotel.getHotelID(), temp);
+		return true;
 	}
 
 	@Override
 	public boolean addMember(MemberVO member) {
 		// TODO Auto-generated method stub
 		this.member=member;
-		MemberPO temp = new MemberPO(member.getMemberID(), member.getName(), member.getPassword(), member.getBirthday(), member.getCredit(), member.getTel());
-		mem.saveMInformation(temp.getMemberID(), temp);
+		//MemberPO temp = new MemberPO(member.getMemberID(), member.getName(), member.getPassword(), member.getBirthday(), member.getCredit(), member.getTel());
+		//mem.saveMInformation(temp.getMemberID(), temp);
+		new MemberPO(member.getMemberID(), member.getName(), member.getPassword(), member.getBirthday(), member.getCredit(), member.getTel());
 		return true;
 	}
 
@@ -118,8 +127,9 @@ public class User implements UserController {
 	public boolean deleteMember(MemberVO member) {
 		// TODO Auto-generated method stub
 		this.member=member;
-		MemberPO temp = new MemberPO(member.getMemberID(), member.getName(), member.getPassword(), member.getBirthday(), member.getCredit(), member.getTel());
-		user.deleteMember(temp);
+		//MemberPO temp = new MemberPO(member.getMemberID(), member.getName(), member.getPassword(), member.getBirthday(), member.getCredit(), member.getTel());
+		//user.deleteMember(temp);
+		member=null;
 		return true;
 	}
 

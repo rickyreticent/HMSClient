@@ -30,11 +30,13 @@ public class Room implements RoomController {
 	 * @version 2016-11-13 17:23
 	 */
 	@Override
-	public void updateRoom(RoomVO room) {
+	public boolean updateRoom(RoomVO room) {
 		// TODO Auto-generated method stub
 		this.room=room;
-		roomPO temp = new roomPO(room.getValid(), room.getNumber(), room.getRoomType(), room.getPrice());
-		roomData.updateRoom(temp);
+		//roomPO temp = new roomPO(room.isValid(), room.getNumber(), room.getType(), room.getPrice());
+		new roomPO(room.isValid(), room.getNumber(), room.getType(), room.getPrice());
+		//roomData.updateRoom(temp);
+		return true;
 	}
 
 	/**
@@ -43,11 +45,13 @@ public class Room implements RoomController {
 	 * @version 2016-11-13 17:33
 	 */
 	@Override
-	public void addRoom(RoomVO room) {
+	public boolean addRoom(RoomVO room) {
 		// TODO Auto-generated method stub
 		this.room=room;
-		roomPO temp = new roomPO(room.getValid(), room.getNumber(), room.getRoomType(), room.getPrice());
-		roomData.addRoom(temp);
+		//roomPO temp = new roomPO(room.isValid(), room.getNumber(), room.getType(), room.getPrice());
+		new roomPO(room.isValid(), room.getNumber(), room.getType(), room.getPrice());
+		//roomData.addRoom(temp);
+		return true;
 	}
 	
 }
