@@ -9,8 +9,9 @@ public class PromotionVO {
 	boolean VIP;
 	String district;
 	double discount;
+	String ID;
 	
-	public PromotionVO(DateVO b, int rn, boolean c, DateVO da, boolean v, String di, double dis) {
+	public PromotionVO(DateVO b, int rn, boolean c, DateVO da, boolean v, String di, double dis,String id) {
 		birthday = b;
 		roomNumber = rn;
 		coordinate = c;
@@ -18,6 +19,7 @@ public class PromotionVO {
 		VIP = v;
 		district = di;
 		discount = dis;
+		ID=id;
 	}
 	
 	public DateVO getBirthday() {
@@ -74,6 +76,10 @@ public class PromotionVO {
 	
 	public double getDiscount() {
 		return discount;
+	}
+	
+	public String getID() {
+		return ID;
 	}
 	
 }
