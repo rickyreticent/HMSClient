@@ -45,7 +45,7 @@ public class ReserveTest {
 		String district = "南京市新街口";
 		double discount = 0.8;
 		MockPromotion promo = new MockPromotion(birthday, roomNum, isCoordinate,
-				date, isVIP, district, discount);
+				date, isVIP, district, discount, "0011");
 		r.setPromotion(promo);
 		
 		assertEquals(r.getPromotion(), promo);
