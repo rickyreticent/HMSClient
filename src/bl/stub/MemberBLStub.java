@@ -2,10 +2,11 @@ package bl.stub;
 
 import java.util.ArrayList;
 
-import ui.blservice.MemberBLService;
+import ui.controller.MemberController;
 import vo.MemberVO;
+import vo.OrderVO;
 
-public class MemberBLStub implements MemberBLService {
+public class MemberBLStub implements MemberController {
 
 	String memberID;
 	String name;
@@ -44,6 +45,60 @@ public class MemberBLStub implements MemberBLService {
 		ArrayList<String> creditList = new ArrayList<String>();
 		creditList.add("2016-10-01			+100");
 		return creditList;
+	}
+
+	@Override
+	public String getCredit(String memberID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean updateCredit(String memberID, String newCredit) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean checkCredit(String memberID) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public OrderVO getOrder(String orderID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<OrderVO> gerOrderList(String userID) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void cancelOrder(String orderID) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public ArrayList<OrderVO> getUnOrder(ArrayList<OrderVO> orderList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<OrderVO> getAlOrder(ArrayList<OrderVO> orderList) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<OrderVO> getAandCOrder(ArrayList<OrderVO> orderList) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

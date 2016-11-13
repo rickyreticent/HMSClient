@@ -1,10 +1,10 @@
 package bl.stub;
 
-import ui.blservice.ReserveBLService;
+import ui.controller.ReserveController;
 import vo.DateVO;
 import vo.PromotionVO;
 
-public class ReserveBLStub implements ReserveBLService {
+public class ReserveBLStub implements ReserveController {
 
 	@Override
 	public void setDate(DateVO date) {

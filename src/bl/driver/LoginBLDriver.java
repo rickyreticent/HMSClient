@@ -1,11 +1,11 @@
 package bl.driver;
 
 import bl.stub.LoginBLStub;
-import ui.blservice.LoginBLService;
+import ui.controller.LoginController;
 
 public class LoginBLDriver {
 
-	LoginBLService service = new LoginBLStub();
+	LoginController service = new LoginBLStub();
 	
 	public void isCorrect(String ID, String password){
 		System.out.println("---登陆————");

@@ -2,11 +2,11 @@ package bl.driver;
 
 import bl.implementation.Search;
 import bl.stub.SearchBLStub;
-import ui.blservice.SearchBLService;
+import ui.controller.SearchController;
 
 public class SearchBLDriver {
 
-	SearchBLService searchbl = new SearchBLStub();
+	SearchController searchbl = new SearchBLStub();
 	
 	public void drive(Search search) {
 		search.setAddress("XianLinBigRoad");

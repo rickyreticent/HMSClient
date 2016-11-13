@@ -1,8 +1,8 @@
-package ui.blservice;
+package ui.controller;
 
 import vo.RoomVO;
 
-public interface RoomBLService {
+public interface RoomController {
 
 	public RoomVO getRoom(String number);
 	public boolean addRoom(RoomVO room);
