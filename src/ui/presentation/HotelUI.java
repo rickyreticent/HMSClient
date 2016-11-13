@@ -5,11 +5,7 @@ import vo.HotelVO;
 public class HotelUI {
 
 	private class hotel_main{
-		protected void getMInformation () {
-			//
-			String memberID="0001";
-			
-		}
+		
 		protected void getOrderList () {
 			
 		}
