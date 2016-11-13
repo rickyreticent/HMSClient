@@ -34,6 +34,6 @@ public class RoomTest {
 	@Test
 	public void testUpdateRoom(){
 		room.updateRoom(room2);
-		assertEquals(room2.getType(), room.findRoom(room2.getNumber()).getRoomType());
+		assertEquals(room2.getType(), room.findRoom(room2.getNumber()).getType());
 	}
 }
