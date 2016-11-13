@@ -11,7 +11,7 @@ public class PromotionVO {
 	double discount;
 	String ID;
 	
-	public PromotionVO(DateVO b, int rn, boolean c, DateVO da, boolean v, String di, double dis,String id) {
+	public PromotionVO(DateVO b, int rn, boolean c, DateVO da, boolean v, String di, double dis, String id) {
 		birthday = b;
 		roomNumber = rn;
 		coordinate = c;
