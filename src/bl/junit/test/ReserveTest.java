@@ -37,21 +37,18 @@ public class ReserveTest {
 
 	@Test
 	public void tesetSetPromotion() {
-		MockDate birthday = new MockDate(1997, 10, 10);
+		MockDate birthday = new MockDate(1996, 1, 1);
 		int roomNum = 3304;
 		boolean isCoordinate = false;
-		MockDate date = new MockDate(2016, 10, 01);
-		boolean isVIP = true;
+		MockDate date = new MockDate(2016, 10, 10);
+		boolean isVIP = false;
 		String district = "南京市新街口";
-		MockPromotion mockPromotion = new MockPromotion(birthday, roomNum, isCoordinate, date, isVIP, district, 0.8);
-		r.setPromotion(mockPromotion);
+		double discount = 0.8;
+		MockPromotion promo = new MockPromotion(birthday, roomNum, isCoordinate,
+				date, isVIP, district, discount);
+		r.setPromotion(promo);
 		
-		assertEquals(r.getPromotion().getBirthday(), birthday);
-		assertEquals(r.getPromotion().getRoomNumber(), roomNum);
-		assertEquals(r.getPromotion().getCoordinate(), isCoordinate);
-		assertEquals(r.getPromotion().getBirthday(), date);
-		assertEquals(r.getPromotion().getVIP(), isVIP);
-		assertEquals(r.getPromotion().getDistrict(), district);
+		assertEquals(r.getPromotion(), promo);
 	}
 
 }
