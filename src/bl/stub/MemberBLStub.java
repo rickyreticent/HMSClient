@@ -3,11 +3,11 @@ package bl.stub;
 import java.util.ArrayList;
 import java.util.List;
 
-import ui.controller.MemberController;
+import bl.service.MemberBLService;
 import vo.MemberVO;
 import vo.OrderVO;
 
-public class MemberBLStub implements MemberController {
+public class MemberBLStub implements MemberBLService {
 
 	String memberID;
 	String name;

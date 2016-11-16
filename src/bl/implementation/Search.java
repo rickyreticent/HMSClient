@@ -2,10 +2,10 @@ package bl.implementation;
 
 import java.util.ArrayList;
 
-import ui.controller.SearchController;
+import bl.service.SearchBLService;
 import vo.*;
 
-public class Search implements SearchController {
+public class Search implements SearchBLService {
 	
 	private String address;
 	private String district;

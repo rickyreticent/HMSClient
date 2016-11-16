@@ -1,8 +1,8 @@
 package bl.implementation;
 
-import ui.controller.LoginController;
+import bl.service.LoginBLService;
 
-public class Login implements LoginController {
+public class Login implements LoginBLService {
 
 	public boolean isCorrect(String ID,String password) {
 		return true;

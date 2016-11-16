@@ -2,12 +2,12 @@ package bl.stub;
 
 import java.util.ArrayList;
 
-import ui.controller.HotelController;
+import bl.service.HotelBLService;
 import vo.HotelVO;
 import vo.OrderVO;
 import vo.RoomVO;
 
-public class HotelBLStub implements HotelController{
+public class HotelBLStub implements HotelBLService{
 
 	String memberID;
 	String name;
