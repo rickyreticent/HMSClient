@@ -3,16 +3,14 @@ package bl.implementation;
 import java.util.ArrayList;
 import java.util.List;
 
-import ui.controller.MemberController;
+import bl.service.MemberBLService;
 import vo.MemberVO;
 import vo.OrderVO;
 
-public class Member implements MemberController {
+public class Member extends User implements MemberBLService {
 	
 	public Order ordermanager = new Order();
 	
-	private String ID;
-	private String password;
 	private String name;
 	private String birthday;
 	private String phone;
@@ -21,7 +19,7 @@ public class Member implements MemberController {
 	private List<String> creditList;
 	public Member(String ID,String password,String birthday,String name,String phone,double credit) {
 		setID(ID);
-		this.password=password;
+		setPassword(password);
 		this.name=name;
 		this.birthday=birthday;
 		this.phone=phone;
@@ -101,10 +99,10 @@ public class Member implements MemberController {
 	}
 	
 	public String getPassword() {
-		return password;
+		return passWord;
 	}
 	public void setPassword(String password) {
-		this.password = password;
+		this.passWord = password;
 	}
 	public String getName() {
 		return name;

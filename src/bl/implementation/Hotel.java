@@ -2,16 +2,15 @@ package bl.implementation;
 
 import java.util.List;
 
-import ui.controller.HotelController;
+import bl.service.HotelBLService;
 import vo.HotelVO;
 import vo.OrderVO;
 import vo.RoomVO;
 
-public class Hotel implements HotelController{
+public class Hotel extends User implements HotelBLService{
 
 	public Order ordermanager = new Order();
 	public Room roommanager = new Room();
-	private String ID;
 	private HotelVO VO;
 	private String name;
 	private String address;

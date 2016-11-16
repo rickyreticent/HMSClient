@@ -1,13 +1,13 @@
 package bl.driver;
 
 import bl.implementation.Reserve;
+import bl.service.ReserveBLService;
 import bl.stub.ReserveBLStub;
-import ui.controller.ReserveController;
 import vo.*;
 
 public class ReserveBLDriver {
 
-	ReserveController reservebl = new ReserveBLStub();
+	ReserveBLService reservebl = new ReserveBLStub();
 	
 	public void drive(Reserve reserve) {
 		reserve.setDate(new DateVO(2016, 12, 5));

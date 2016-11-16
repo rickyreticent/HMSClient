@@ -1,7 +1,7 @@
 package bl.driver;
 
+import bl.service.HotelBLService;
 import bl.stub.HotelBLStub;
-import ui.controller.HotelController;
 import vo.HotelVO;
 import vo.OrderVO;
 import vo.RoomVO;
@@ -30,7 +30,7 @@ public class HotelBLDriver {
 	static String roomID = "0000";
 	static RoomVO RO = new RoomVO(true, "111", 0,price);
 	
-	public void drive(HotelController H) {
+	public void drive(HotelBLService H) {
 		System.out.println(H.getHotelInformat(hotelID));
 		System.out.println(H.check(orderID, memberID, roomID, RO, 0));
 		System.out.println(H.getOrder(orderID));
@@ -43,7 +43,7 @@ public class HotelBLDriver {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		HotelController H = new HotelBLStub(memberID, name, level, address, district, credit, phone, checkInTime, checkOutTime, roomType, roomNumber, promotion, discount, price);
+		HotelBLService H = new HotelBLStub(memberID, name, level, address, district, credit, phone, checkInTime, checkOutTime, roomType, roomNumber, promotion, discount, price);
 		HotelBLDriver drive = new HotelBLDriver();
 		drive.drive(H);
 	}

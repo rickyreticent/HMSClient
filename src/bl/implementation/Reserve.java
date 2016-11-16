@@ -1,9 +1,9 @@
 package bl.implementation;
 
-import ui.controller.ReserveController;
+import bl.service.ReserveBLService;
 import vo.*;
 
-public class Reserve implements ReserveController {
+public class Reserve implements ReserveBLService {
 	
 	private DateVO date;
 	private int days;
