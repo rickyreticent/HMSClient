@@ -1,9 +1,9 @@
 package bl.stub;
 
-import ui.controller.OrderController;
+import bl.service.OrderBLService;
 import vo.OrderVO;
 
-public class OrderBLStub implements OrderController {
+public class OrderBLStub implements OrderBLService {
 	
 	public OrderVO getOrder(){
 		return new OrderVO(1, "1997-2-2", "1997-2-5", 1, 2, "��", 0, 450,"1112585");

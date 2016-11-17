@@ -1,7 +1,7 @@
 package bl.driver;
 
+import bl.service.MemberBLService;
 import bl.stub.MemberBLStub;
-import ui.controller.MemberController;
 import vo.MemberVO;
 
 public class MemberBLDriver {
@@ -16,7 +16,7 @@ public class MemberBLDriver {
 	static String phone="12348555";
 	
 	public void drive(MemberVO M){
-		MemberController memberBL = new MemberBLStub(level,memberID,pass, name, birth, phone, credit);
+		MemberBLService memberBL = new MemberBLStub(level,memberID,pass, name, birth, phone, credit);
 		System.out.println(memberBL.saveMInformation(memberID, M));
 		System.out.println(memberBL.getMInformation(memberID));
 		System.out.println(memberBL.getCreditList(memberID));

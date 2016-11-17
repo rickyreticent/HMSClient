@@ -2,10 +2,10 @@ package bl.implementation;
 
 import java.util.ArrayList;
 
-import ui.controller.PromotionController;
+import bl.service.PromotionBLService;
 import vo.PromotionVO;
 
-public class Promotion implements PromotionController {
+public class Promotion implements PromotionBLService {
 	private String ID;
 	private ArrayList<PromotionVO> promotionList=new ArrayList<PromotionVO>();
 	

@@ -1,11 +1,11 @@
 package bl.implementation;
 
 import bl.dataservice.RoomData;
+import bl.service.RoomBLService;
 import po.roomPO;
-import ui.controller.RoomController;
 import vo.RoomVO;
 
-public class Room implements RoomController {
+public class Room implements RoomBLService {
 	
 	private RoomVO room;
 	private RoomData roomData;

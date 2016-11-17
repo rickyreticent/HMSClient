@@ -1,9 +1,9 @@
 package bl.stub;
 
-import ui.controller.RoomController;
+import bl.service.RoomBLService;
 import vo.RoomVO;
 
-public class RoomBLStub implements RoomController {
+public class RoomBLStub implements RoomBLService {
 
 	@Override
 	public boolean addRoom(RoomVO room) {
